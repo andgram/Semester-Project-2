@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Site</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/main.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <nav id="top-nav"></nav>  <!-- The nav will be generated dynamically -->
+    </header>
+
+    <main>
+        <h1>Welcome to the Auction Site!</h1>
+        <p>Welcome to the best place for online auctions. You can browse current auctions and find great deals!</p>
+
+        <div id="user-actions">
+            <!-- Buttons for registered users to navigate, or unregistered users to login -->
+            <a href="/src/pages/auction-list.html" class="cta-button">View Auctions</a>
+            <a href="/src/pages/login.html" class="cta-button">Login</a>
+        </div>
+
+        <!-- Message prompting login for more features -->
+        <section id="login-prompt">
+            <h2>Limited Access for Unregistered Users</h2>
+            <p>To fully participate in auctions, you need to be logged in. Create an account or log in to:</p>
+            <ul>
+                <li>Place bids on auction items</li>
+                <li>Create your own auctions</li>
+                <li>Access your profile and manage settings</li>
+            </ul>
+            <p><a href="/src/pages/login.html" class="cta-button">Login</a> or <a href="/src/pages/register.html" class="cta-button">Register</a> to unlock all features!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Auction Site</p>
+    </footer>
+</body>
+</html>

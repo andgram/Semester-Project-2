@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Auction - Auction Site</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/main.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <nav id="top-nav"></nav>
+    </header>
+
+    <main>
+        <h1>Create a New Auction</h1>
+
+        <form>
+            <label for="title">Auction Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="media">Add Media (Images/Video):</label>
+            <input type="file" id="media" name="media[]" multiple>
+
+            <label for="deadline">Auction Deadline:</label>
+            <input type="datetime-local" id="deadline" name="deadline" required>
+
+            <button type="submit">Create Auction</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Auction Site</p>
+    </footer>
+</body>
+</html>
