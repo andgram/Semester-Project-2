@@ -12,5 +12,5 @@ export function onLogout() {
 
 function handleLogout() {
     removeToken();
-    window.location.href = "/";
+    window.location.href = "/auth/login/";
 }

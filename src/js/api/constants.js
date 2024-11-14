@@ -5,6 +5,8 @@ export const API_BASE = import.meta.env.VITE_API_URL;
 
 export const API_AUTH = `${API_BASE}/auth`;
 
+export const API_AUCTION_LISTINGS = `${API_BASE}/auction/listings`;
+
 export const API_AUTH_LOGIN = `${API_AUTH}/login`;
 
 export const API_AUTH_REGISTER = `${API_AUTH}/register`;

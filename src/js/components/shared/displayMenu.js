@@ -10,8 +10,8 @@ export function displayMenu() {
     if (loggedin) {
       nav.innerHTML = `
         <a href="/">Home</a>
-        <a href="/profile">My Profile</a>
-        <a href="/auctions/create/">Create Auction</a>
+        <a href="/profile/">My Profile</a>
+        <a href="/auction/create/">Create Auction</a>
         <button id="logout-button">Logout</button>
       `;
 
@@ -28,8 +28,8 @@ export function displayMenu() {
     } else {
       nav.innerHTML = `
         <a href="/">Home</a>
-        <a href="/auth/login">Login</a>
-        <a href="/auth/register">Register</a>
+        <a href="/auth/login/">Login</a>
+        <a href="/auth/register/">Register</a>
       `;
     }
   }
