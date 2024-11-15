@@ -12,7 +12,6 @@ export default async function router(pathname = window.location.pathname) {
     case "/auth/login/":
       await import("./views/login.js");
       console.log("login.js running");
-      
       break;
     case "/auth/register/":
       await import("./views/register.js");
@@ -21,6 +20,10 @@ export default async function router(pathname = window.location.pathname) {
     case "/auction/list/index.html":
       await import("./views/auctionList.js");
       console.log("auctionList.js running");
+      break;
+    case "/auction/details/":
+      await import("./views/auction.js");
+      console.log("auction.js running");
       break;
   }
 

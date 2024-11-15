@@ -17,7 +17,7 @@ export function renderAuctions(container, auctions) {
 
         const item = document.createElement("a");
         item.classList.add("auction-item");
-        item.href = `/details/?id=${id}`;
+        item.href = `/auction/details/?id=${id}`;
 
         const titleElement = document.createElement("h3");
         titleElement.innerText = title;
