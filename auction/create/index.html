@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Auction - Auction Site</title>
     <script type="module" src="/src/main.js"></script>
 </head>
+
 <body>
     <header>
         <nav id="top-nav"></nav>
@@ -14,18 +16,20 @@
     <main>
         <h1>Create a New Auction</h1>
 
-        <form>
-            <label for="title">Auction Title:</label>
-            <input type="text" id="title" name="title" required>
+        <form id="createAuction">
+            <div id="message"></div>
+            
+            <label for="title">Title (required):</label>
+            <input type="text" id="title" name="title" required />
 
-            <label for="description">Description:</label>
-            <textarea id="description" name="description" required></textarea>
+            <label for="description">Description (optional):</label>
+            <textarea id="description" name="description"></textarea>
 
-            <label for="media">Add Media (Images/Video):</label>
-            <input type="file" id="media" name="media[]" multiple>
+            <label for="media">Media URL (optional):</label>
+            <input type="url" id="media" name="media" placeholder="https://example.com/image.jpg"/>
 
-            <label for="deadline">Auction Deadline:</label>
-            <input type="datetime-local" id="deadline" name="deadline" required>
+            <label for="endsAt">End Date (required):</label>
+            <input type="datetime-local" id="endsAt" name="endsAt" required />
 
             <button type="submit">Create Auction</button>
         </form>
@@ -35,4 +39,5 @@
         <p>&copy; 2024 Auction Site</p>
     </footer>
 </body>
+
 </html>
