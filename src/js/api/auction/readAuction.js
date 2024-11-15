@@ -34,7 +34,6 @@ export async function readAuctions() {
     if(!response.ok) {
         throw new Error(json.errors[0].message);
     }
-    console.log(json);
     return json;
 }
 
