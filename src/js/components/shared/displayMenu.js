@@ -1,6 +1,11 @@
 import { isAuthenticated } from "../../utilities/storage";
 import { onLogout } from "../../ui/auth/logout";
 
+
+// Important note:
+// User not loggedin should only have access to "login", "register" and list of auctions
+// Everything else should have an authguard with a card poping up
+
 export function displayMenu() {
   const nav = document.querySelector('#top-nav');
 

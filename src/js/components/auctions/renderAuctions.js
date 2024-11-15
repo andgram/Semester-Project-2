@@ -13,7 +13,7 @@ export function renderAuctions(container, auctions) {
 
     function createAuctionItemHtml(auctionItem) {
 
-        const { id, description, title } = auctionItem;
+        const { id, title } = auctionItem;
 
         const item = document.createElement("a");
         item.classList.add("auction-item");
@@ -22,12 +22,7 @@ export function renderAuctions(container, auctions) {
         const titleElement = document.createElement("h3");
         titleElement.innerText = title;
 
-        const descriptionElement = document.createElement("p");
-        descriptionElement.innerText = description;
-
         item.appendChild(titleElement);
-        item.appendChild(descriptionElement);
-    
 
         return item;
     }

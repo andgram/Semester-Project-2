@@ -1,4 +1,4 @@
-import { API_AUCTION_LISTINGS } from "../constants";
+import { API_AUCTION_LISTINGS, API_AUCTION_PROFILES  } from "../constants";
 import { headers } from "../headers";
 
 
@@ -35,6 +35,21 @@ export async function readAuctions() {
         throw new Error(json.errors[0].message);
     }
     console.log(json);
+    return json;
+}
+
+// // Load auctions by profile
+export async function readAuctionsbyProfile(username) {
+
+    const response = await fetch(`${API_AUCTION_PROFILES}/${username}/listings`, {
+        headers: headers(),
+    });
+
+    const json = await response.json();
+    
+    if(!response.ok) {
+        throw new Error(json.errors[0].message);
+    }
     return json;
 }
 
