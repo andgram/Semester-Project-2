@@ -1,11 +1,11 @@
-import { renderAdminButtons } from "./renderAdminButtons";
+import { renderAuctionButtons } from "./renderButtons";
 
 export function renderAuction(container, auction) {
     container.innerHTML = ""; 
 
     const { title, description, media, endsAt } = auction;
 
-    const adminButtons = renderAdminButtons(auction);
+    const adminButtons = renderAuctionButtons(auction);
         if(adminButtons) {
             container.appendChild(adminButtons);
         }  

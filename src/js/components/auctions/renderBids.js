@@ -5,10 +5,12 @@ export function renderBids(container, bids) {
         container.innerHTML = "<p>No bids yet.</p>";
         return;
     }
+
+    bids.reverse();
     
     const highestBid = bids[0]; 
     const bidElement = document.createElement("p");
-    bidElement.innerText = `Latest Bid: $${highestBid.amount}`;
+    bidElement.innerText = `Highest Bid: $${highestBid.amount}`;
     container.appendChild(bidElement);
 
     const showAllButton = document.createElement("button");
