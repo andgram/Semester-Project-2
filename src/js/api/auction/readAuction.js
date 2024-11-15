@@ -9,7 +9,7 @@ export async function readAuction(id) {
         throw new Error("This call needs an id");
     }
 
-    const response = await fetch(`${API_AUCTION_LISTINGS}/${id}`, {
+    const response = await fetch(`${API_AUCTION_LISTINGS}/${id}?_bids=true`, {
         headers: headers(),
     });
 
