@@ -1,7 +1,7 @@
 export function renderAuctions(container, auctions) {
 
     if (auctions.length === 0) {
-       container.innerHTML = `<div class="message">No auctions to show</div>`;
+       container.innerHTML = `<div id="message">No auctions to show</div>`;
        return;
     } 
 

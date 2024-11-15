@@ -29,9 +29,9 @@ export async function onCreateAuction(event) {
         await createAuction({ title, description, media, endsAt });
         displayMessage("#message", "success", "Auction created succesfully.");
         form.reset();
-        /* setTimeout(() => {
+        setTimeout(() => {
             window.location.href = "/profile/";
-        }, 2000);*/
+        }, 2000);
     }
 
     catch (error) {

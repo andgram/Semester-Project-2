@@ -3,7 +3,7 @@ export function renderProfileAuctions(container, auctions) {
     const auctionsData = auctions.data;
 
     if (auctionsData.length === 0) {
-        container.innerHTML = `<div class="message">No listings yet</div>`;
+        container.innerHTML = `<div id="message">No listings yet</div>`;
         return;
     }
 

@@ -1,7 +1,14 @@
+import { renderAdminButtons } from "./renderAdminButtons";
+
 export function renderAuction(container, auction) {
     container.innerHTML = ""; 
 
     const { title, description, media, endsAt } = auction;
+
+    const adminButtons = renderAdminButtons(auction);
+        if(adminButtons) {
+            container.appendChild(adminButtons);
+        }  
 
     // Title
     const heading = document.createElement("h1");
