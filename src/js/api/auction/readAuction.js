@@ -1,7 +1,6 @@
 import { API_AUCTION_LISTINGS, API_AUCTION_PROFILES  } from "../constants";
 import { headers } from "../headers";
 
-
 // Load single auction by id
 export async function readAuction(id) {
 
