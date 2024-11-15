@@ -13,10 +13,34 @@
         <nav id="top-nav"></nav>
     </header>
 
+    <!-- Profile Edit Modal (Initially hidden) -->
+    <div id="profile-edit-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Edit Profile</h2>
+            <form id="profile-edit-form">
+                <label for="avatar-url">Avatar URL:</label>
+                <input type="text" id="avatar-url" name="avatar-url" placeholder="Enter new avatar URL"><br>
+
+                <label for="banner-url">Banner URL:</label>
+                <input type="text" id="banner-url" name="banner-url" placeholder="Enter new banner URL"><br>
+
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" placeholder="Enter new bio"></textarea><br>
+
+                <button type="submit">Update Profile</button>
+                <button type="button" id="cancel-edit">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    
+
     <main>
         <section id="profile-header">
             <!-- Display banner and avatar here -->
         </section>
+
+        <div id="message"></div>
 
         <section id="profile-details">
             <!-- Display profile details here -->
