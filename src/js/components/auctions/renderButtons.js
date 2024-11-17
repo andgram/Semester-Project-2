@@ -1,5 +1,5 @@
 import { onDeleteAuction } from "../../ui/auction/delete";
-import { loadName } from "../../utilities/storage";
+import { isAuthenticated, loadName } from "../../utilities/storage";
 import { showBidInput } from "./showBidInput";
 
 export function renderAuctionButtons(auction) {
@@ -23,8 +23,8 @@ export function renderAuctionButtons(auction) {
 
         div.appendChild(editButton);
         div.appendChild(deleteButton);
-    } else {
-        // Show the "Place Bid" button if the logged-in user is not the seller
+    } else if (isAuthenticated()) {
+        // Show the "Place Bid" button if the logged-in user is not the seller, but still logged in
         const bidButton = document.createElement("button");
         bidButton.innerText = "Place Bid";
         bidButton.dataset.id = id;
