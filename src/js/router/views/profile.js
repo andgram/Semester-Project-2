@@ -4,6 +4,9 @@ import { loadName } from "../../utilities/storage";
 import { loadProfile } from "../../api/profile/loadProfile";
 import { renderProfile } from "../../ui/profile/renderProfile";
 import { onUpdateProfile } from "../../ui/profile/profile";
+import { authGuard } from "../../utilities/authGuard";
+
+authGuard()
 
 async function loadAndDisplayProfile() {
     // Get name from logged in user to display on profile page

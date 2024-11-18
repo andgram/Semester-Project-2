@@ -1,4 +1,7 @@
 import { onAddMediaInput, onCreateAuction } from "../../ui/auction/create";
+import { authGuard } from "../../utilities/authGuard";
+
+authGuard()
 
 // Add event listener for the form submission
 const form = document.forms.createAuction;
