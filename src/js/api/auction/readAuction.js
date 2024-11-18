@@ -36,6 +36,21 @@ export async function readAuctions() {
     return json;
 }
 
+// Load all active auctions
+export async function readActiveAuctions() {
+
+    const response = await fetch(`${API_AUCTION_LISTINGS}?_active=true`, {
+        headers: headers(),
+    });
+
+    const json = await response.json();
+    
+    if(!response.ok) {
+        throw new Error(json.errors[0].message);
+    }
+    return json;
+}
+
 // // Load auctions by profile
 export async function readAuctionsbyProfile(username) {
 

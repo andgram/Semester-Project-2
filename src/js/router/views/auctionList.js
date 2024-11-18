@@ -1,19 +1,16 @@
-import { readAuctions } from "../../api/auction/readAuction";
+import { readActiveAuctions } from "../../api/auction/readAuction";
 import { searchAuctions } from "../../api/auction/searchAuctions";
 import { renderAuctionList } from "../../components/auctions/renderAuctionList";
 import { bindSearchEvents } from "../../components/auctions/bindSearchEvents";
 import { handleError } from "../../components/shared/handleError";
 
+const response = await readActiveAuctions();
+const auctions = response.data;
 
-// Display auctions with a limit
-async function displayAuctions(limit = 10) {
-    try {
-        const response = await readAuctions();
-        const limitedAuctions = response.data.slice(0, limit);
-        renderAuctionList("#auctionList", limitedAuctions);
-    } catch (error) {
-        handleError("#auctionList", error);
-    }
+function displayNewestAuctions(auctions, limit) {
+  const sortedAuctions = auctions.sort((a, b) => new Date(b.created) - new Date(a.created));
+  const limitedAuctions = sortedAuctions.slice(0, limit);
+  renderAuctionList('#auctionList', limitedAuctions);
 }
 
 // Handle search
@@ -36,7 +33,7 @@ async function handleSearch(event) {
 
 // Initialize the auctions page
 function initAuctionsPage() {
-    displayAuctions(10); // Display suggested auction listings
+    displayNewestAuctions(auctions, 12);
     bindSearchEvents("#searchButton", "#searchInput", handleSearch);
 }
 
