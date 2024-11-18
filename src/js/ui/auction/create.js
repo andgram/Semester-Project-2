@@ -11,8 +11,14 @@ export async function onCreateAuction(event) {
     // Transform form data
     const title = data.title.trim();
     const description = data.description?.trim() || "";
-    const mediaInput = data.media?.trim();
     const endsAt = new Date(data.endsAt).toISOString();
+
+    // Collect media URLs
+    const mediaInputs = document.querySelectorAll("#mediaInputs input[name='media']");
+    const media = Array.from(mediaInputs)
+        .map((input) => input.value.trim())
+        .filter((url) => url) 
+        .map((url) => ({ url, alt: "Auction media" }));
 
     // Validate required fields
     if (!title || !endsAt) {
@@ -20,21 +26,24 @@ export async function onCreateAuction(event) {
         return;
     }
 
-    const media = mediaInput
-        ? [{ url: mediaInput, alt: "Auction media" }] 
-        : [];
-
-
     try {
         await createAuction({ title, description, media, endsAt });
-        displayMessage("#message", "success", "Auction created succesfully.");
+        displayMessage("#message", "success", "Auction created successfully.");
         form.reset();
         setTimeout(() => {
             window.location.href = "/profile/";
         }, 2000);
-    }
-
-    catch (error) {
+    } catch (error) {
         displayMessage("#message", "error", error.message);
     }
 }
+
+// Logic to dynamically add media inputs
+export function onAddMediaInput() {
+    const mediaInputsContainer = document.querySelector("#mediaInputs");
+    const newMediaInput = document.createElement("input");
+    newMediaInput.type = "url";
+    newMediaInput.name = "media";
+    newMediaInput.placeholder = "https://example.com/image.jpg";
+    mediaInputsContainer.appendChild(newMediaInput);
+  }

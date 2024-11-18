@@ -26,10 +26,18 @@ export function renderAuction(container, auction) {
     container.appendChild(endsAtElement);
 
     // Media (if present)
-    if (media?.[0]?.url) {
-        const mediaElement = document.createElement("img");
-        mediaElement.src = media[0].url;
-        mediaElement.alt = media[0].alt || "Auction media";
-        container.appendChild(mediaElement);
+    if (media && media.length > 0) {
+        const mediaContainer = document.createElement("div");
+        mediaContainer.classList.add("media-container");
+
+        media.forEach(({ url, alt }, index) => {
+            const mediaElement = document.createElement("img");
+            mediaElement.src = url;
+            mediaElement.alt = alt || `Auction media ${index + 1}`;
+            mediaElement.classList.add("auction-image");
+            mediaContainer.appendChild(mediaElement);
+        });
+
+        container.appendChild(mediaContainer);
     }
 }

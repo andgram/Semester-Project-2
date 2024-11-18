@@ -25,8 +25,11 @@
             <label for="description">Description (optional):</label>
             <textarea id="description" name="description"></textarea>
 
-            <label for="media">Media URL (optional):</label>
-            <input type="url" id="media" name="media" placeholder="https://example.com/image.jpg"/>
+            <label for="media">Media URLs (optional):</label>
+            <div id="mediaInputs">
+                <input type="url" name="media" placeholder="https://example.com/image.jpg" />
+            </div>
+            <button type="button" id="addMedia">Add Another Media URL</button>
 
             <label for="endsAt">End Date (required):</label>
             <input type="datetime-local" id="endsAt" name="endsAt" required />
