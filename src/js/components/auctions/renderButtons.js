@@ -10,19 +10,15 @@ export function renderAuctionButtons(auction) {
     const div = document.createElement("div");
     div.classList.add("auction-buttons");
 
-    // Show Edit and Delete buttons if the logged-in user is the seller
+    // Show Delete button if the logged-in user is the seller
     if (sellerName === username) {
-        const editButton = document.createElement("a");
-        editButton.innerText = "Edit";
-        editButton.href = `/auction/edit/?id=${id}`;
-
+      
         const deleteButton = document.createElement("button");
         deleteButton.innerText = "Delete";
         deleteButton.dataset.id = id;
-        deleteButton.addEventListener("click", onDeleteAuction);  // Event listener for delete action
-
-        div.appendChild(editButton);
+        deleteButton.addEventListener("click", onDeleteAuction);
         div.appendChild(deleteButton);
+        
     } else if (isAuthenticated()) {
         // Show the "Place Bid" button if the logged-in user is not the seller, but still logged in
         const bidButton = document.createElement("button");
