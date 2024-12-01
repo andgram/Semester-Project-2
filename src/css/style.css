@@ -1,0 +1,166 @@
+/* ====================
+   global styles
+   ==================== */
+
+   :root {
+    --clr-primary-500: #3774F9;
+    --clr-primary-600: #353945;
+    --clr-primary-700: #000;
+  
+    --clr-neutral-400: #A0A0A0;
+    --clr-neutral-300: #fff;
+  
+  
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-accent: 'Montserrat', sans-serif;
+  
+    --fs-300: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+    --fs-400: clamp(1.2rem, 1.0959rem + 0.5207vw, 1.4994rem);
+    --fs-500: clamp(1.44rem, 1.2457rem + 0.9717vw, 1.9988rem);
+    --fs-600: clamp(1.7281rem, 1.4025rem + 1.6283vw, 2.6644rem);
+    --fs-700: clamp(2.0738rem, 1.5596rem + 2.5707vw, 3.5519rem);
+    --fs-800: clamp(2.4881rem, 1.7066rem + 3.9076vw, 4.735rem);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: var(--fs-300);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: var(--clr-primary-700);
+    color: var(--clr-neutral-300);
+  }
+  
+  body,
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+  
+  /* ====================
+       typography
+       ==================== */
+  
+  h1,
+  h2,
+  h3 {
+    line-height: 1;
+    font-family: var(--ff-accent);
+    font-weight: 700;
+  }
+  
+  h2,
+  h3,
+  p {
+    margin-bottom: 1em;
+  }
+  
+  h1 {
+    margin-top: 2.5rem;
+    font-size: var(--fs-800);
+  }
+  
+  h2 {
+    font-size: var(--fs-600);
+  }
+  
+  h3 {
+    font-size: var(--fs-400);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: var(--fs-300);
+  }
+
+
+/* ====================
+   Layout
+   ==================== */
+
+
+ .section-spacing {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+  }
+  
+  .space-between {
+    justify-content: space-between;
+  }
+  
+  .bg-bluegray {
+    background-color: var(--clr-primary-600);
+  }
+
+  @media (min-width: 50em) {
+    .section-spacing {
+      padding: 7rem 0;
+    }
+  
+    .split {
+      display: flex;
+    }
+  
+    .split>*+* {
+      margin-left: 2em;
+    }
+  
+    .split.flip>*+* {
+      margin-right: 2em;
+      margin-left: 0;
+    }
+  
+    .split>* {
+      flex-basis: 100%;
+    }
+  }
+
+  /* ====================
+   Img
+   ==================== */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ====================
+   Header
+   ==================== */
+
+.header-wrapper {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.6em;
+    margin-bottom: 1em;
+  }
+  
+  .sr-only {
+    display: none;
+  }
+  
+  .header-logo {
+    width: 10em;
+  }
+  

@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auction Site</title>
     <script type="module" src="/src/main.js"></script>
 </head>
+
 <body>
-    <header>
-        <nav id="top-nav"></nav>  <!-- The nav will be generated dynamically -->
+    <header class="container">
+        <nav id="top-nav"></nav> <!-- The nav will be generated dynamically -->
     </header>
 
-    <main>
-        <div id="message"></div>
-        <h1>Welcome to the Auction Site!</h1>
-        <p>Welcome to the best place for online auctions. You can browse current auctions and find great deals!</p>
+    <main class="section-spacing">
+        <div class="container">
+            <div id="message"></div>
+            <h1>Welcome to the Auction Site!</h1>
+            <p>Welcome to the best place for online auctions. You can browse current auctions and find great deals!</p>
 
-        <div id="user-actions">
-            <!-- Buttons for registered users to navigate, or unregistered users to login -->
-            <a href="/auction/list/index.html" class="cta-button">View Auctions</a>
+            <div id="user-actions">
+                <!-- Buttons for registered users to navigate, or unregistered users to login -->
+                <a href="/auction/list/index.html" class="cta-button">View Auctions</a>
+            </div>
         </div>
-
-        <!-- Message prompting login for more features 
-        <section id="login-prompt">
-            <h2>Limited Access for Unregistered Users</h2>
-            <p>To fully participate in auctions, you need to be logged in. Create an account or log in to:</p>
-            <ul>
-                <li>Place bids on auction items</li>
-                <li>Create your own auctions</li>
-                <li>Access your profile and manage settings</li>
-            </ul>
-            <p><a href="/auth/login/" class="cta-button">Login</a> or <a href="/auth/register/" class="cta-button">Register</a> to unlock all features!</p>
-        </section>
-        -->
     </main>
 
-    <footer>
+    <footer class="container">
         <p>&copy; 2024 Auction Site</p>
     </footer>
 </body>
+
 </html>
