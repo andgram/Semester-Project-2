@@ -7,7 +7,6 @@ export function onLogout() {
     if (logoutButton) {
         logoutButton.addEventListener('click', handleLogout);
     }
-    
 }
 
 function handleLogout() {

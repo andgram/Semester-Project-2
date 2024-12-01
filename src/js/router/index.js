@@ -1,8 +1,10 @@
 import { displayMenu } from "../components/shared/displayMenu.js";
+import { setupMobileNav } from "../components/shared/mobileNav.js";
 
 export default async function router(pathname = window.location.pathname) {
 
   displayMenu();
+  setupMobileNav(".primary-navigation", ".mobile-nav-toggle");
 
   switch (pathname) {
     case "/":

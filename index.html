@@ -10,7 +10,13 @@
 
 <body>
     <header class="container">
-        <nav id="top-nav"></nav> <!-- The nav will be generated dynamically -->
+        <div class="header-wrapper">
+            <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation"
+                aria-expanded="false" role="button">
+                <span class="sr-only">Menu</span>
+            </div>
+            <nav id="top-nav"></nav> <!-- The nav will be generated dynamically -->
+        </div>
     </header>
 
     <main class="section-spacing">
