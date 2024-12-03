@@ -353,3 +353,32 @@ a.active::after {
     font-size: var(--fs-300);
    }
 
+
+   /* ====================
+   Explor section
+   ==================== */
+
+   .auction-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Remove underline from the link */
+    width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   }
+
+   .auction-item-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover; /* Ensures the image scales and fills the container */
+   }
+
+   .auction-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0;
+    text-align: center;
+}

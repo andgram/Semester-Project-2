@@ -11,18 +11,35 @@ export function renderAuctions(container, auctions) {
     container.append(...auctionItemHtml);
 }
 
-    function createAuctionItemHtml(auctionItem) {
+function createAuctionItemHtml(auctionItem) {
+    const { id, title, media } = auctionItem; // Destructure the necessary fields
 
-        const { id, title } = auctionItem;
+    const item = document.createElement("a");
+    item.classList.add("auction-item");
+    item.href = `/auction/details/?id=${id}`;
 
-        const item = document.createElement("a");
-        item.classList.add("auction-item");
-        item.href = `/auction/details/?id=${id}`;
+    // Create the title element
+    const titleElement = document.createElement("h3");
+    titleElement.innerText = title;
 
-        const titleElement = document.createElement("h3");
-        titleElement.innerText = title;
+    // Create the image element
+    const imageElement = document.createElement("img");
+    imageElement.classList.add("auction-item-image");
 
-        item.appendChild(titleElement);
-
-        return item;
+    // Check if media is an array and has at least one object
+    if (Array.isArray(media) && media.length > 0) {
+        const firstMedia = media[0];
+        imageElement.src = firstMedia.url; 
+        imageElement.alt = firstMedia.alt || `${title} image`;
+    } else {
+        // Fallback to a placeholder if no media is available
+        imageElement.src = "/src/assets/placeholder.jpg";
+        imageElement.alt = "Placeholder image";
     }
+
+    // Append the image and title to the item
+    item.appendChild(imageElement);
+    item.appendChild(titleElement);
+
+    return item;
+}
