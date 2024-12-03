@@ -55,7 +55,6 @@ h2,
 h3 {
   line-height: 1;
   font-family: var(--ff-accent);
-  font-weight: 700;
 }
 
 h2,
@@ -67,14 +66,17 @@ p {
 h1 {
   margin-top: 2.5rem;
   font-size: var(--fs-800);
+  font-weight: 400;
 }
 
 h2 {
   font-size: var(--fs-600);
+  font-weight: 400;
 }
 
 h3 {
   font-size: var(--fs-400);
+  font-weight: 400;
 }
 
 .text-center {
@@ -91,27 +93,27 @@ a {
    Buttons
    ==================== */
 
-   .button-l {
-    font-size: var(--fs-300);
-    color: #fff;
-    background-color: #3774F9;
-    padding: 0.6em 1.4em;
-    border-radius: 9999px;
-    cursor: pointer;
-    border: none;
-    text-align: center;
-   }
+.button-l {
+  font-size: var(--fs-300);
+  color: #fff;
+  background-color: #3774F9;
+  padding: 0.6em 1.4em;
+  border-radius: 9999px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
 
-   .button-secondary-l {
-    font-size: var(--fs-300);
-    color: #000;
-    background-color: var(--clr-neutral-300);
-    padding: 0.6em 1.4em;
-    border-radius: 9999px;
-    cursor: pointer;
-    border: none;
-    text-align: center;
-   }
+.button-secondary-l {
+  font-size: var(--fs-300);
+  color: #000;
+  background-color: var(--clr-neutral-300);
+  padding: 0.6em 1.4em;
+  border-radius: 9999px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
 
 
 /* ====================
@@ -278,107 +280,129 @@ a.active::after {
    Hero section
    ==================== */
 
-   .hero-bg {
-    background-image: url("/src/assets/hero-bg.jpg");
-    background-size: cover;
-    background-position: right top;
-    height: 100vh;
-   }
+.hero-bg {
+  background-image: url("/src/assets/hero-bg.jpg");
+  background-size: cover;
+  background-position: right top;
+  height: 100vh;
+}
 
-   .hero-left-col {
-    width: 66%;
-   }
+.hero-left-col {
+  width: 66%;
+}
 
-  .hero-heading {
-    font-weight: 300;
-    color: var(--clr-neutral-400);
-    font-size: var(--fs-800);
-    margin-bottom: 2.4rem;
-  }  
+.hero-heading {
+  font-weight: 300;
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-800);
+  margin-bottom: 2.4rem;
+}
 
-  .hero-heading span {
-    font-weight: 600;
-    color: #fff;
+.hero-heading span {
+  font-weight: 600;
+  color: #fff;
+}
+
+.subhead {
+  font-size: var(--fs-400);
+  font-weight: 300;
+  color: var(--clr-neutral-400);
+  margin-bottom: 7rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1.6rem;
+  width: fit-content;
+}
+
+@media (max-width: 50em) {
+
+  .hero-left-col {
+    width: 100%;
   }
 
   .subhead {
-    font-size: var(--fs-400);
-    font-weight: 300;
-    color: var(--clr-neutral-400);
-    margin-bottom: 7rem;
+    margin-bottom: 4rem;
   }
 
+  .hero-bg {
+    background: #000;
+  }
+}
+
+@media (max-width: 30em) {
   .button-group {
-    display: flex;
-    gap: 1.6rem;
-    width: fit-content;
+    flex-direction: column;
   }
+}
 
-  @media (max-width: 50em) {
-
-    .hero-left-col {
-      width: 100%;
-     }
-
-    .subhead {
-      margin-bottom: 4rem;
-    }
-
-    .hero-bg {
-      background: #000;
-    }
-  }
-
-  @media (max-width: 30em) {
-    .button-group {
-      flex-direction: column;
-    }
-  }
-
-
-  
 
 
 /* ====================
    Footer
    ==================== */
 
-   footer {
-    text-align: center;
-   }
+footer {
+  text-align: center;
+}
 
-   footer p {
-    color: var(--clr-neutral-400);
-    font-weight: 300;
-    font-size: var(--fs-300);
-   }
+footer p {
+  color: var(--clr-neutral-400);
+  font-weight: 300;
+  font-size: var(--fs-300);
+}
 
 
-   /* ====================
+/* ====================
    Explor section
    ==================== */
 
-   .auction-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none; /* Remove underline from the link */
-    width: 300px;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   }
-
-   .auction-item-image {
-    width: 300px;
-    height: 200px;
-    object-fit: cover; /* Ensures the image scales and fills the container */
-   }
-
-   .auction-item h3 {
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    margin: 10px 0;
-    text-align: center;
+.auction-grid {
+  display: grid;
+  gap: .125rem;
+  grid-template-columns:
+    repeat(auto-fit, minmax(20rem, 1fr));
 }
+
+.auction-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.auction-item-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.auction-item h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0;
+  text-align: center;
+}
+
+
+/* ====================
+   Search section
+   ==================== */
+
+.search-section {
+  text-align: center;
+}
+
+.search-results-grid {
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Creates responsive columns */
+    gap: 16px; /* Space between grid items */
+    padding: 16px; /* Optional: Padding around the grid */
+}
+
+

@@ -10,25 +10,37 @@
 
 <body>
     <header>
-        <nav id="top-nav"></nav>
+        <div class="header-wrapper">
+            <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation"
+                aria-expanded="false" role="button">
+                <span class="sr-only">Menu</span>
+            </div>
+            <a href="index.html" class="header-logo">bid<span>sphere</span></a>
+            <nav id="top-nav"></nav> <!-- The nav will be generated dynamically -->
+        </div>
     </header>
 
-    <main>
-        <section>
+    <main class="section-spacing">
+        <section class="container">
+            <h1 class="text-center">Explore Auctions</h1>
             <div id="message"></div>
-            <h2>Newest Active Auctions</h2>
-            <div id="auctionList">
+            <h2 class="text-center">Newest Active Auctions</h2>
+            <div id="auctionList" class="auction-grid">
                 <!-- Auction items will be dynamically loaded here -->
             </div>
         </section>
     </main>
 
-    <section>
-        <div id="searchSection">
-            <h2>Search For Auctions</h2>
-            <input type="text" id="searchInput" placeholder="Search auctions..." />
-            <button id="searchButton">Search</button>
-            <div id="searchResults"></div>
+    <section class="bg-bluegray section-spacing">
+        <div class="container">
+            <div id="searchSection" class="search-section">
+                <h2 class="text-center">Search For Auctions</h2>
+                <div>
+                    <input type="text" id="searchInput" placeholder="Search auctions..." />
+                    <button id="searchButton">Search</button>
+                </div>
+                <div id="searchResults" class="search-results-grid"></div>
+            </div>
         </div>
     </section>
 
