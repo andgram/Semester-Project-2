@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List - Auction Site</title>
     <script type="module" src="/src/main.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -15,16 +18,16 @@
                 aria-expanded="false" role="button">
                 <span class="sr-only">Menu</span>
             </div>
-            <a href="index.html" class="header-logo">bid<span>sphere</span></a>
+            <a href="index.html" class="header-logo">Bid<span>Sphere</span></a>
             <nav id="top-nav"></nav> <!-- The nav will be generated dynamically -->
         </div>
     </header>
 
-    <main class="section-spacing">
+    <main class="section-spacing-top">
         <section class="container">
-            <h1 class="text-center">Explore Auctions</h1>
+            <h1 class="text-center title">Explore Auctions</h1>
             <div id="message"></div>
-            <h2 class="text-center">Newest Active Auctions</h2>
+            <h2 class="text-center">Newest Active</h2>
             <div id="auctionList" class="auction-grid">
                 <!-- Auction items will be dynamically loaded here -->
             </div>
@@ -39,7 +42,7 @@
                     <input type="text" id="searchInput" placeholder="Search auctions..." />
                     <button id="searchButton">Search</button>
                 </div>
-                <div id="searchResults" class="search-results-grid"></div>
+                <div id="searchResults" class="auction-grid"></div>
             </div>
         </div>
     </section>

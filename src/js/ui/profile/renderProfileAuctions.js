@@ -25,7 +25,7 @@ function createListingHtml(auction) {
     const { id, title, media } = auction;
 
     const item = document.createElement("a");
-    item.classList.add("profile-listing-item");
+    item.classList.add("auction-item");
     item.href = `/auction/details/?id=${id}`;
 
     const titleElement = document.createElement("h3");
@@ -33,6 +33,7 @@ function createListingHtml(auction) {
 
     // Access the first media item's URL if it exists
     const imageElement = document.createElement("img");
+    imageElement.className = "auction-item-image";
     if (media?.length > 0 && media[0]?.url) {
         imageElement.src = media[0].url;
         imageElement.alt = media[0].alt || "Auction image";
@@ -40,8 +41,8 @@ function createListingHtml(auction) {
         imageElement.alt = "No image available";
     }
 
-    item.appendChild(titleElement);
     item.appendChild(imageElement);
+    item.appendChild(titleElement);
 
     return item;
 }
