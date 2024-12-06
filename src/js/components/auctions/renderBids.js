@@ -14,6 +14,7 @@ export function renderBids(container, bids) {
     container.appendChild(bidElement);
 
     const showAllButton = document.createElement("button");
+    showAllButton.classList.add("button-secondary");
     showAllButton.innerText = "Show All Bids";
     container.appendChild(showAllButton);
 

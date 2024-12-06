@@ -14,6 +14,7 @@ export function renderAuctionButtons(auction) {
     if (sellerName === username) {
       
         const deleteButton = document.createElement("button");
+        deleteButton.classList.add("button");
         deleteButton.innerText = "Delete";
         deleteButton.dataset.id = id;
         deleteButton.addEventListener("click", onDeleteAuction);
@@ -22,6 +23,7 @@ export function renderAuctionButtons(auction) {
     } else if (isAuthenticated()) {
         // Show the "Place Bid" button if the logged-in user is not the seller, but still logged in
         const bidButton = document.createElement("button");
+        bidButton.classList.add("button");
         bidButton.innerText = "Place Bid";
         bidButton.dataset.id = id;
 

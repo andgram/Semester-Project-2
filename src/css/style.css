@@ -98,27 +98,38 @@ a {
    Buttons
    ==================== */
 
-.button-l {
-  font-size: var(--fs-300);
-  color: #fff;
-  background-color: #3774F9;
-  padding: 0.6em 1.4em;
-  border-radius: 9999px;
-  cursor: pointer;
-  border: none;
-  text-align: center;
-}
-
-.button-secondary-l {
-  font-size: var(--fs-300);
-  color: #000;
-  background-color: var(--clr-neutral-300);
-  padding: 0.6em 1.4em;
-  border-radius: 9999px;
-  cursor: pointer;
-  border: none;
-  text-align: center;
-}
+   .button, .button-secondary {
+    font-size: var(--fs-300);
+    border-radius: 9999px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    padding: 0.4em 1em;
+    font-size: 16px;
+    transition: 250ms;
+  }
+  
+  .button {
+    color: #fff;
+    background-color: #3774F9;
+  }
+  
+  .button:hover {
+    background-color: #0e44b7;
+  }
+  
+  .button-secondary {
+    color: #000;
+    background-color: var(--clr-neutral-300);
+  }
+  
+  .button-secondary:hover {
+    background-color: #c5c5c5;
+  }
+  
+  .button.l, .button-secondary.l {
+    padding: 0.6em 1.4em;
+  }
 
 
 /* ====================
@@ -422,13 +433,6 @@ footer p {
    Profile page
    ==================== */
 
-   /* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 #profile-header {
   position: relative;
   text-align: center;
@@ -457,11 +461,11 @@ footer p {
 }
 
 .profile-avatar img {
-  width: 150px; /* Size of the avatar image */
-  height: 150px; /* Maintain a square shape */
-  border-radius: 50%; /* Make it circular */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  background-color: white; /* Fallback background */
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  background-color: white; 
 }
 
 .profile-details {
@@ -508,6 +512,120 @@ footer p {
   }
 }
 
+/* ====================
+   Auction page 
+   ==================== */
 
-  
+.auction-details {
+  display: flex;
+  color: #000;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 4rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.auction-details h1 {
+  font-size: var(--fs-600);
+}
+
+.auction-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  flex: 1;
+}
+
+.active-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.auction-active-image {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.thumbnails-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.auction-thumbnail {
+  width: 75px; 
+  height: 75px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auction-thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auction-right-col {
+  flex: 1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auction-right-col p:nth-of-type(2) {
+  background-color: var(--clr-primary-600);
+  color: var(--clr-neutral-300);
+  width: fit-content;
+  padding: 0.4em 1em;
+  border-radius: 5px;
+}
+
+#auctionBids {
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  background-color: var(--clr-primary-600);
+  padding: 2em;
+  border-radius: 10px;
+  padding: 2rem 4rem;
+}
+
+#auctionBids p {
+  margin: 0; 
+}
+
+#auctionBids button {
+  margin-top: 1rem;
+}
+
+
+@media (max-width: 768px) {
+
+
+  .auction-details {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .auction-active-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #auctionBids {
+    padding: 2rem;
+  }
+}
+
   
