@@ -209,6 +209,14 @@ img {
   margin-bottom: 1em;
 }
 
+.header-wrapper ul button {
+  background:none;
+  color: var(--clr-neutral-300);
+  border: none;
+  font-size: var(--fs-300);
+  position: relative;
+}
+
 .sr-only {
   display: none;
 }
@@ -248,7 +256,7 @@ nav a {
   
 }
 
-nav a:after {
+nav a:after, .header-wrapper ul button:after  {
   content: "";
   position: absolute;
   background-color: var(--clr-primary-600);
@@ -263,7 +271,9 @@ nav a:after {
 }
 
 nav a:hover::after,
-a.active::after {
+a.active::after,
+.header-wrapper ul button:hover::after,
+.header-wrapper ul button:active::after {
   width: 100%;
 }
 
