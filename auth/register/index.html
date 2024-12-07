@@ -21,52 +21,54 @@
     </div>
 </header>
 
-    <main>
-        <h1>Create a New Account</h1>
+<main class="form-container">
+  <h1 class="auth-heading">Create a New Account</h1>
 
-        <form name="register" class="auth-form">
-            <div id="message"></div>
-            <div>
-              <label for="name">Name</label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                required
-                maxlength="20"
-                pattern="^[\w]+$"
-                title="Enter username"
-              />
-            </div>
-        
-            <div>
-              <label for="email">Email</label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                required
-                title="Enter a valid stud.noroff.no address"
-              />
-            </div>
-        
-            <div>
-              <label for="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                required
-              />
-            </div>
-            <button>Register</button>
-          </form>
+  <form name="register" class="auth-form">
+    <div id="message"></div>
 
-        <p>Already have an account? <a href="/auth/login/index.html">Login here</a></p>
-    </main>
+    <div>
+      <label for="name">Name</label>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        required
+        maxlength="20"
+        pattern="^[\w]+$"
+        title="Enter username"
+      />
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        required
+        title="Enter a valid stud.noroff.no address"
+      />
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        required
+      />
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <p>Already have an account? <a href="/auth/login/index.html">Login here</a></p>
+</main>
 
     <footer>
-        <p>&copy; 2024 Auction Site</p>
+        <p>&copy; 2024 BidSphere</p></p>
     </footer>
 </body>
 </html>

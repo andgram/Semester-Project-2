@@ -21,46 +21,49 @@
     </div>
 </header>
 
-    <main>
-        <h1>Login to Your Account</h1>
-
-        <form name="login" id="loginForm">
-            <div id="message"></div>
-            
-            <div>
-              <label for="email">Email</label>
-              <input 
-                id="email" 
-                type="email" 
-                name="email" 
-                required 
-              />
-            </div>
-    
-            <div>
-              <label for="password">Password</label>
-              <input 
-                type="password" 
-                name="password" 
-                id="password" 
-                required 
-              />
-            </div>
-    
-            <div>
-            </div>
-    
-            <button 
-              type="submit">
-              Login
-            </button>
-          </form>
-
+    <main class="section-spacing-top">
+       <div class="container">
+        
+      <h1 class="text-center auth-heading">Login to Your Account</h1>
+       <div class="form-container">
+        <form name="login" id="loginForm" class="auth-form">
+          <div id="message"></div>
+          
+          <div>
+            <label for="email">Email</label>
+            <input 
+              id="email" 
+              type="email" 
+              name="email" 
+              required 
+            />
+          </div>
+  
+          <div>
+            <label for="password">Password</label>
+            <input 
+              type="password" 
+              name="password" 
+              id="password" 
+              required 
+            />
+          </div>
+  
+          <div>
+          </div>
+  
+          <button class="button" 
+            type="submit">
+            Login
+          </button>
+        </form>
         <p>Don't have an account? <a href="/auth/register/index.html">Register here</a></p>
+       </div>
+       </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Auction Site</p>
+        <p>&copy; 2024 BidSphere</p></p>
     </footer>
 </body>
 </html>
