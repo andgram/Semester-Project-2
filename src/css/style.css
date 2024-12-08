@@ -215,6 +215,7 @@ img {
   border: none;
   font-size: var(--fs-300);
   position: relative;
+  cursor: pointer;
 }
 
 .sr-only {
@@ -277,7 +278,7 @@ a.active::after,
   width: 100%;
 }
 
-@media (max-width: 35em) {
+@media (max-width: 40em) {
   .primary-navigation {
     gap: 2em;
     position: fixed;
@@ -643,7 +644,6 @@ footer p {
    Auth pages
    ==================== */
 
-/* Shared Container Styles */
 .form-container {
   display: flex;
   justify-content: center;
@@ -682,7 +682,6 @@ footer p {
   margin-bottom: 2rem;
 }
 
-/* Form Fields */
 .auth-form label {
   font-weight: var(--fs-400);
   font-size: 0.9rem;

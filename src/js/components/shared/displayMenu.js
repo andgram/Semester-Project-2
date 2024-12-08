@@ -17,6 +17,7 @@ export function displayMenu() {
       if (currentPage === "/profile/") {
         ul.innerHTML = `
           <li><a href="/">Home</a></li>
+          <li><a href="/auction/list/index.html">Listings</a></li>
           <li id="edit-profile-button"><a href="/profile/">Edit Profile</a></li>
           <li><a href="/auction/create/">Create Auction</a></li>
           <li><button id="logout-button">Logout</button></li>
@@ -25,6 +26,7 @@ export function displayMenu() {
         // If logged in and not on the profile page
         ul.innerHTML = `
           <li><a href="/">Home</a></li>
+          <li><a href="/auction/list/index.html">Listings</a></li>
           <li><a href="/profile/">My Profile</a></li>
           <li><a href="/auction/create/">Create Auction</a></li>
           <li><button id="logout-button">Logout</button></li>
@@ -41,6 +43,7 @@ export function displayMenu() {
       // If the user is not logged in
       ul.innerHTML = `
         <li><a href="/">Home</a></li>
+        <li><a href="/auction/list/index.html">Listings</a></li>
         <li><a href="/auth/login/">Login</a></li>
         <li><a href="/auth/register/">Register</a></li>
       `;
