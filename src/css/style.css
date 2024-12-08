@@ -98,38 +98,40 @@ a {
    Buttons
    ==================== */
 
-   .button, .button-secondary {
-    font-size: var(--fs-300);
-    border-radius: 9999px;
-    cursor: pointer;
-    border: none;
-    text-align: center;
-    padding: 0.4em 1em;
-    font-size: 16px;
-    transition: 250ms;
-  }
-  
-  .button {
-    color: #fff;
-    background-color: #3774F9;
-  }
-  
-  .button:hover {
-    background-color: #0e44b7;
-  }
-  
-  .button-secondary {
-    color: #000;
-    background-color: var(--clr-neutral-300);
-  }
-  
-  .button-secondary:hover {
-    background-color: #c5c5c5;
-  }
-  
-  .button.l, .button-secondary.l {
-    padding: 0.6em 1.4em;
-  }
+.button,
+.button-secondary {
+  font-size: var(--fs-300);
+  border-radius: 9999px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  padding: 0.4em 1em;
+  font-size: 16px;
+  transition: 250ms;
+}
+
+.button {
+  color: #fff;
+  background-color: #3774F9;
+}
+
+.button:hover {
+  background-color: #0e44b7;
+}
+
+.button-secondary {
+  color: #000;
+  background-color: var(--clr-neutral-300);
+}
+
+.button-secondary:hover {
+  background-color: #c5c5c5;
+}
+
+.button.l,
+.button-secondary.l {
+  padding: 0.6em 1.4em;
+}
 
 
 /* ====================
@@ -210,7 +212,7 @@ img {
 }
 
 .header-wrapper ul button {
-  background:none;
+  background: none;
   color: var(--clr-neutral-300);
   border: none;
   font-size: var(--fs-300);
@@ -254,10 +256,11 @@ img {
 nav a {
   color: #fff;
   position: relative;
-  
+
 }
 
-nav a:after, .header-wrapper ul button:after  {
+nav a:after,
+.header-wrapper ul button:after {
   content: "";
   position: absolute;
   background-color: var(--clr-primary-600);
@@ -376,8 +379,6 @@ a.active::after,
   }
 }
 
-
-
 /* ====================
    Footer
    ==================== */
@@ -453,7 +454,7 @@ footer p {
 .profile-banner {
   width: 100%;
   height: 250px;
-  overflow: hidden; 
+  overflow: hidden;
   background-color: #f4f4f4;
   z-index: 1;
 }
@@ -473,11 +474,11 @@ footer p {
 }
 
 .profile-avatar img {
-  width: 150px; 
-  height: 150px; 
-  border-radius: 50%; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  background-color: white; 
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
 .profile-details {
@@ -571,7 +572,7 @@ footer p {
 }
 
 .auction-thumbnail {
-  width: 75px; 
+  width: 75px;
   height: 75px;
   object-fit: cover;
   border-radius: 4px;
@@ -612,7 +613,7 @@ footer p {
 }
 
 #auctionBids p {
-  margin: 0; 
+  margin: 0;
 }
 
 #auctionBids button {
@@ -621,8 +622,6 @@ footer p {
 
 
 @media (max-width: 768px) {
-
-
   .auction-details {
     flex-direction: column;
     padding: 2rem;
@@ -669,7 +668,7 @@ footer p {
 }
 
 .clean-form {
-  background: var(--clr-primary-600); 
+  background: var(--clr-primary-600);
   color: var(--clr-neutral-300);
   padding: 2rem;
   border-radius: 8px;
@@ -727,5 +726,122 @@ footer p {
   .clean-form input {
     font-size: 0.9rem;
     padding: 0.7rem;
+  }
+}
+
+/* ====================
+   Modal Styling
+   ==================== */
+
+.modal {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background: var(--clr-primary-600); 
+  color: var(--clr-neutral-300);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  margin-top: -20px;
+  margin-left: 0;
+}
+
+.modal-content h2 {
+  margin-bottom: 1.5rem;
+  font-size: var(--fs-500);
+  color: #fff;
+}
+
+#profile-edit-form label {
+  font-weight: var(--fs-400);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+#profile-edit-form input,
+#profile-edit-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333333;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+#profile-edit-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#profile-edit-form input:focus,
+#profile-edit-form textarea:focus {
+  border-color: #3774f9;
+  outline: none;
+  box-shadow: 0 0 4px rgba(55, 116, 249, 0.5);
+}
+
+#profile-edit-form button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#profile-edit-form button[type="submit"] {
+  background-color: var(--clr-primary-500);
+  color: var(--clr-neutral-100);
+}
+
+#profile-edit-form button[type="submit"]:hover {
+  background-color: #0e44b7;
+}
+
+#profile-edit-form #cancel-edit {
+  background-color: var(--clr-neutral-300);
+  color: #333;
+  margin-left: 1rem;
+}
+
+#profile-edit-form #cancel-edit:hover {
+  background-color: #d4d4d4;
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  #profile-edit-form input,
+  #profile-edit-form textarea {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  #profile-edit-form button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
   }
 }
