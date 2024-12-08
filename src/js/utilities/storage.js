@@ -29,6 +29,7 @@ export function removeToken() {
     remove(TOKEN);
 }
 
+
 export function isAuthenticated() {
     return !!loadToken();
 }

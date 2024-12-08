@@ -1,4 +1,4 @@
-import { removeToken } from "../../utilities/storage";
+import { clear } from "../../utilities/storage";
 
 export function onLogout() {
 
@@ -10,6 +10,6 @@ export function onLogout() {
 }
 
 function handleLogout() {
-    removeToken();
+    clear();
     window.location.href = "/auth/login/";
 }
