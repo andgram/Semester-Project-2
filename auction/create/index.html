@@ -23,29 +23,33 @@
         </div>
     </header>
 
-    <main>
-        <h1>Create a New Auction</h1>
+    <main class="section-spacing-top">
+        <div class="container">
+            <h1 class="text-center auth-heading">Create a New Auction</h1>
 
-        <form id="createAuction">
-            <div id="message"></div>
-            
-            <label for="title">Title (required):</label>
-            <input type="text" id="title" name="title" required />
-
-            <label for="description">Description (optional):</label>
-            <textarea id="description" name="description"></textarea>
-
-            <label for="media">Media URLs (optional):</label>
-            <div id="mediaInputs">
-                <input type="url" name="media" placeholder="https://example.com/image.jpg" />
-            </div>
-            <button type="button" id="addMedia">Add Another Media URL</button>
-
-            <label for="endsAt">End Date (required):</label>
-            <input type="datetime-local" id="endsAt" name="endsAt" required />
-
-            <button type="submit">Create Auction</button>
-        </form>
+        <div class="form-container">
+            <form id="createAuction" class="clean-form">
+                <div id="message"></div>
+                
+                <label for="title">Title (required):</label>
+                <input type="text" id="title" name="title" required />
+    
+                <label for="description">Description (optional):</label>
+                <textarea id="description" name="description"></textarea>
+    
+                <label for="media">Media URLs (optional):</label>
+                <div id="mediaInputs">
+                    <input type="url" name="media" placeholder="https://example.com/image.jpg" />
+                </div>
+                <button type="button" id="addMedia" class="button">Add Another Media URL</button>
+    
+                <label for="endsAt">End Date (required):</label>
+                <input type="datetime-local" id="endsAt" name="endsAt" required />
+    
+                <button class="button" type="submit">Create Auction</button>
+            </form>
+        </div>
+        </div>
     </main>
 
     <footer>
