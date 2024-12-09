@@ -92,48 +92,7 @@
     text-decoration: none;
     font-size: var(--fs-300);
   }
-  
-  
-  /* ====================
-     Buttons
-     ==================== */
-  
-  .button,
-  .button-secondary {
-    font-size: var(--fs-300);
-    border-radius: 9999px;
-    cursor: pointer;
-    border: none;
-    text-align: center;
-    padding: 0.4em 1em;
-    font-size: 16px;
-    transition: 250ms;
-  }
-  
-  .button {
-    color: #fff;
-    background-color: #3774F9;
-  }
-  
-  .button:hover {
-    background-color: #0e44b7;
-  }
-  
-  .button-secondary {
-    color: #000;
-    background-color: var(--clr-neutral-300);
-  }
-  
-  .button-secondary:hover {
-    background-color: #c5c5c5;
-  }
-  
-  .button.l,
-  .button-secondary.l {
-    padding: 0.6em 1.4em;
-  }
-  
-  
+
   /* ====================
      Layout
      ==================== */

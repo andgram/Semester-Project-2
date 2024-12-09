@@ -1,0 +1,326 @@
+/* ====================
+   Forms
+   ==================== */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-container p {
+  font-weight: var(--fs-400);
+}
+
+.form-container a {
+  color: var(--clr-primary-500);
+  text-decoration: underline;
+}
+
+.form-container a:hover {
+  color: #0e44b7;
+}
+
+.auth-heading {
+  margin-bottom: 3.5rem;
+}
+
+.clean-form {
+  background: var(--clr-primary-600);
+  color: var(--clr-neutral-300);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.clean-form label {
+  font-weight: var(--fs-400);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.clean-form input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.clean-form input:focus {
+  border-color: #3774f9;
+  outline: none;
+  box-shadow: 0 0 4px rgba(55, 116, 249, 0.5);
+}
+
+.clean-form button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-500);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.clean-form button:hover {
+  background-color: #0e44b7;
+}
+
+@media (max-width: 480px) {
+  .clean-form {
+    padding: 1.5rem;
+  }
+
+  .clean-form input {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+}
+
+/* ====================
+     Modal
+     ==================== */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background: var(--clr-primary-600);
+  color: var(--clr-neutral-300);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -20px;
+  margin-left: 0;
+}
+
+.modal-content h2 {
+  margin-bottom: 1.5rem;
+  font-size: var(--fs-500);
+  color: #fff;
+}
+
+#profile-edit-form label {
+  font-weight: var(--fs-400);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+#profile-edit-form input,
+#profile-edit-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333333;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+#profile-edit-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#profile-edit-form input:focus,
+#profile-edit-form textarea:focus {
+  border-color: #3774f9;
+  outline: none;
+  box-shadow: 0 0 4px rgba(55, 116, 249, 0.5);
+}
+
+#profile-edit-form button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#profile-edit-form button[type="submit"] {
+  background-color: var(--clr-primary-500);
+  color: var(--clr-neutral-100);
+}
+
+#profile-edit-form button[type="submit"]:hover {
+  background-color: #0e44b7;
+}
+
+#profile-edit-form #cancel-edit {
+  background-color: var(--clr-neutral-300);
+  color: #333;
+  margin-left: 1rem;
+}
+
+#profile-edit-form #cancel-edit:hover {
+  background-color: #d4d4d4;
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  #profile-edit-form input,
+  #profile-edit-form textarea {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  #profile-edit-form button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* ====================
+     Buttons
+     ==================== */
+
+.button,
+.button-secondary {
+  font-size: var(--fs-300);
+  border-radius: 9999px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  padding: 0.4em 1em;
+  font-size: 16px;
+  transition: 250ms;
+}
+
+.button {
+  color: #fff;
+  background-color: #3774F9;
+}
+
+.button:hover {
+  background-color: #0e44b7;
+}
+
+.button-secondary {
+  color: #000;
+  background-color: var(--clr-neutral-300);
+}
+
+.button-secondary:hover {
+  background-color: #c5c5c5;
+}
+
+.button.l,
+.button-secondary.l {
+  padding: 0.6em 1.4em;
+}
+
+/* ====================
+     Bid buttons
+     ==================== */
+
+
+.auction-buttons .button {
+  margin-bottom: 1rem;
+}
+
+.bid-input-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--clr-neutral-300);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.bid-input-container input[type="number"] {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bid-input-container input[type="number"]:focus {
+  border-color: #3774f9;
+  box-shadow: 0 0 4px rgba(55, 116, 249, 0.5);
+}
+
+.bid-input-container button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bid-input-container button:first-of-type {
+  background-color: var(--clr-primary-500);
+  color: #fff;
+}
+
+.bid-input-container button:first-of-type:hover {
+  background-color: #0e44b7;
+  transform: scale(1.05);
+}
+
+.bid-input-container button:last-of-type {
+  background-color: var(--clr-primary-600);
+  color: #fff;
+}
+
+.bid-input-container button:last-of-type:hover {
+  background-color: #242424;
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .bid-input-container {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .bid-input-container input[type="number"],
+  .bid-input-container button {
+    width: 100%;
+  }
+}

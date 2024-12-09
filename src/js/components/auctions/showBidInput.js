@@ -14,7 +14,7 @@ export function showBidInput(bidButton, auctionId) {
 
     // Submit Bid button
     const submitButton = document.createElement("button");
-    submitButton.innerText = "Submit Bid";
+    submitButton.innerText = "Submit";
     submitButton.dataset.id = auctionId;
     inputContainer.appendChild(submitButton);
 
