@@ -1,4 +1,5 @@
 import { placeBid } from "../../api/auction/bid"
+import { displayMessage } from "../../components/shared/displayMessage";
 
 export async function onPlaceBid(event, auctionId, bidAmount) {
     event.preventDefault();
@@ -12,9 +13,8 @@ export async function onPlaceBid(event, auctionId, bidAmount) {
     try {
         const result = await placeBid(auctionId, bidAmount);
         
-        // If the bid is placed successfully, show the result
-        alert("Bid placed successfully!");
+        displayMessage("#message", "success", "Bid placed successfully.");
     } catch (error) {
-        alert(`Error: ${error.message}`);
+        displayMessage("#message", "error", error.message);
     }
 }

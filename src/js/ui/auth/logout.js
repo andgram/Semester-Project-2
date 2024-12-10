@@ -1,3 +1,4 @@
+import { displayMessage } from "../../components/shared/displayMessage";
 import { clear } from "../../utilities/storage";
 
 export function onLogout() {
@@ -12,4 +13,5 @@ export function onLogout() {
 function handleLogout() {
     clear();
     window.location.href = "/auth/login/";
+    
 }
