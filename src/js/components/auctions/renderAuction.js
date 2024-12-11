@@ -2,8 +2,7 @@ import { renderAuctionButtons } from "./renderButtons";
 import { loadName } from "../../utilities/storage";
 
 export function renderAuction(container, auction) {
-    container.innerHTML = ""; // Clear the container before rendering new content
-
+    container.innerHTML = ""; 
     const { title, description, media, endsAt, seller } = auction;
 
     const sellerName = seller.name;
@@ -16,12 +15,12 @@ export function renderAuction(container, auction) {
     const rightColumn = document.createElement("div");
     rightColumn.classList.add("auction-right-col");
 
-    // Title (right column)
+    // Title
     const heading = document.createElement("h1");
     heading.innerText = title;
     rightColumn.appendChild(heading);
 
-    // Description (right column)
+    // Description
     const descriptionElement = document.createElement("p");
     descriptionElement.innerText = description || "No description provided.";
     rightColumn.appendChild(descriptionElement);
@@ -31,7 +30,7 @@ export function renderAuction(container, auction) {
         rightColumn.appendChild(adminButtons);
     } 
 
-    // Ends at element (right column)
+    // Ends at
     const endsAtElement = document.createElement("p");
 
     // Check if the auction has expired
@@ -51,10 +50,7 @@ export function renderAuction(container, auction) {
         endsAtElement.innerText = `Ends At: ${endTime.toLocaleString()}`;
     }
 
-
     rightColumn.appendChild(endsAtElement);
-
-    // Append the right column to the container
     container.appendChild(rightColumn);
 
     if (media && media.length > 0) {
