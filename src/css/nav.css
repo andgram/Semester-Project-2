@@ -1,0 +1,65 @@
+/* Basic styles for the navigation */
+.primary-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+  z-index: 999; /* Make sure the nav has a lower z-index */
+}
+
+.primary-navigation a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.primary-navigation a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .primary-navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 998; /* Lower z-index for the nav */
+  }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  /* Mobile menu toggle button */
+  .mobile-nav-toggle {
+    display: block;
+    cursor: pointer;
+    position: absolute; /* Position it above the menu */
+    top: 1rem; /* Adjust to your preference */
+    right: 1rem; /* Adjust to your preference */
+    z-index: 9999; /* Ensure it's above the mobile menu */
+  }
+
+  /* Ensure the menu toggle icon is centered and visible */
+  .mobile-nav-toggle svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+}
+
+/* Hide mobile nav toggle on larger screens */
+@media (min-width: 768px) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+}
