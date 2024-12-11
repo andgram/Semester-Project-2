@@ -11,7 +11,6 @@ export function renderProfile(profileData) {
       profileDetails.innerHTML = "";
     }
   
-    // Destructure the profile data
     const { name, bio, avatar, banner, credits } = profileData;
   
     // Check and render avatar and banner in the #profile-header

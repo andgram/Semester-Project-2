@@ -3,7 +3,7 @@ import { isAuthenticated, loadName } from "../../utilities/storage";
 import { showBidInput } from "./showBidInput";
 
 export function renderAuctionButtons(auction) {
-    const username = loadName();  // Get the logged-in user's username
+    const username = loadName();
     const { seller, id } = auction;
     const sellerName = seller.name;
 

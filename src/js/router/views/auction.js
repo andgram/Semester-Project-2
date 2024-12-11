@@ -6,7 +6,7 @@ import { getParam } from "../../utilities/getParam";
 import { setTitle } from "../../utilities/setTitle";
 
 async function displayAuction() {
-    const id = getParam("id"); // Get auction ID from URL
+    const id = getParam("id");
 
     if (!id) {
         // Redirect if no ID is found in the URL

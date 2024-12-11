@@ -51,7 +51,7 @@ export async function readActiveAuctions() {
     return json;
 }
 
-// // Load auctions by profile
+// Load auctions by profile
 export async function readAuctionsbyProfile(username) {
 
     const response = await fetch(`${API_AUCTION_PROFILES}/${username}/listings`, {

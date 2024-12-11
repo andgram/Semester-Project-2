@@ -12,7 +12,7 @@ export function renderAuctions(container, auctions) {
 }
 
 function createAuctionItemHtml(auctionItem) {
-    const { id, title, media } = auctionItem; // Destructure the necessary fields
+    const { id, title, media } = auctionItem;
 
     const item = document.createElement("a");
     item.classList.add("auction-item");
@@ -36,8 +36,6 @@ function createAuctionItemHtml(auctionItem) {
         imageElement.src = "/src/assets/placeholder.jpg";
         imageElement.alt = "Placeholder image";
     }
-
-    // Append the image and title to the item
     item.appendChild(imageElement);
     item.appendChild(titleElement);
 

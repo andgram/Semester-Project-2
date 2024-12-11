@@ -37,7 +37,7 @@ export function showBidInput(bidButton, auctionId) {
             alert("Please enter a valid bid amount.");
             return;
         }
-        // Call your placeBid function
+        // Call placeBid function
         onPlaceBid(event, auctionId, bidAmount);
         inputContainer.remove();
     });
