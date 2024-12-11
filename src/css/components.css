@@ -362,7 +362,7 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-div button:hover {
+#searchSection div button:hover {
   background-color: #0e44b7;
   transform: scale(1.05);
 }
@@ -372,13 +372,13 @@ div button:hover {
 }
 
 @media (max-width: 480px) {
-  div {
+  #searchSection div {
     flex-direction: column;
     gap: 0.6rem;
   }
 
-  div input[type="text"],
-  div button {
+  #searchSection div input[type="text"],
+  #searchSection div button {
     width: 100%;
   }
 }
