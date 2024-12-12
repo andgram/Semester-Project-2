@@ -17,25 +17,25 @@ export function renderAuction(container, auction) {
 
     // Title
     const heading = document.createElement("h1");
-    heading.classList.add("auction-title"); // Add a class for styling
+    heading.classList.add("auction-title");
     heading.innerText = title;
     rightColumn.appendChild(heading);
 
     // Description
     const descriptionElement = document.createElement("p");
-    descriptionElement.classList.add("auction-description"); // Add a class for styling
+    descriptionElement.classList.add("auction-description"); 
     descriptionElement.innerText = description || "No description provided.";
     rightColumn.appendChild(descriptionElement);
 
     const adminButtons = renderAuctionButtons(auction);
     if (adminButtons) {
-        adminButtons.classList.add("auction-admin-buttons"); // Add a class for styling
+        adminButtons.classList.add("auction-admin-buttons"); 
         rightColumn.appendChild(adminButtons);
     } 
 
     // Ends at
     const endsAtElement = document.createElement("p");
-    endsAtElement.classList.add("auction-ends-at"); // Add a class for styling
+    endsAtElement.classList.add("auction-ends-at");
 
     // Check if the auction has expired
     const currentTime = new Date();
