@@ -28,6 +28,7 @@ async function displayAuction() {
             renderAuction(container, response.data);
 
             // Render bids, pass the bids array to the renderBids function
+            // (If authenticated)
             renderBids(bidContainer, response.data.bids);
         } else {
             displayMessage(container, "error", "Auction not found.");

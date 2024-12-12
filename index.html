@@ -6,59 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BidSphere – Home</title>
     <script type="module" src="/src/main.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
 </head>
 
-<body class="bg-black text-white">
-    <header class="bg-black py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
+<body class="bg-primary-700 text-neutral-300 font-primary">
+    <header class="bg-primary-700 py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
         <div class="container mx-auto flex justify-between items-center px-4">
-          <!-- Mobile Menu Toggle -->
-          <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" role="button">
-            <span class="sr-only">Menu</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </div>
-      
-          <!-- Logo -->
-          <a href="/" class="text-white text-2xl font-semibold hover:text-gray-300">
-            Bid<span class="text-yellow-500">Sphere</span>
-          </a>
-      
-          <!-- Primary Navigation -->
-          <nav id="top-nav">
-            <!-- Dynamically generated menu will be inserted here -->
-          </nav>
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" role="button">
+                <span class="sr-only">Menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+        
+            <!-- Logo -->
+            <a href="/" class="text-neutral-300 text-2xl font-semibold font-accent">
+                Bid<span class="text-primary-500">Sphere</span>
+            </a>
+        
+            <!-- Primary Navigation -->
+            <nav id="top-nav">
+                <!-- Dynamically generated menu will be inserted here -->
+            </nav>
         </div>
-      </header>
-      
-      
-      
-
+    </header>
 
     <main>
-        <div class="hero-bg bg-cover bg-center py-40 text-white">
+        <div class="hero-bg bg-cover bg-center py-40 text-neutral-300">
             <section class="section-spacing">
                 <div class="container mx-auto px-4">
                     <div id="message" class="text-center mb-8">
-                        <h1 class="hero-heading text-4xl md:text-5xl font-bold leading-tight mb-4">
-                            Find Rare <span class="text-yellow-500">Treasures</span>
-                            and <span class="text-yellow-500">Unique Deals!</span>
+                        <h1 class="hero-heading text-4xl md:text-5xl leading-tight mb-4 font-light font-accent">
+                            Find Rare <span class="font-bold">Treasures</span>
+                            and <span class="font-bold">Unique Deals!</span>
                         </h1>
-                        <p class="subhead text-lg md:text-xl mb-8">
+                        <p class="subhead text-lg md:text-xl mb-8 font-primary">
                             Discover unique items, outbid the rest, and make them yours today.
                         </p>
+                        
 
                         <!-- Buttons -->
                         <div id="user-actions" class="button-group flex justify-center gap-4">
                             <a href="/auction/list/index.html"
-                                class="button-secondary py-2 px-6 rounded-full bg-yellow-500 text-white hover:bg-yellow-600 transition">
+                                class="button-secondary py-2 px-6 rounded-full bg-primary-500 text-neutral-300 hover:bg-custom-hover-blue transition">
                                 Explore Listings
                             </a>
                             <a href="/auth/register/"
-                                class="button py-2 px-6 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition"
+                                class="button py-2 px-6 rounded-full bg-primary-600 text-neutral-300 hover:bg-custom-hover-gray transition"
                                 id="sign-up-button">
                                 Sign Up
                             </a>
@@ -69,13 +63,11 @@
         </div>
     </main>
 
-
-    <footer class="bg-black py-4 text-center text-white">
+    <footer class="bg-primary-700 py-4 text-center text-neutral-300">
         <div class="container mx-auto">
             <p>&copy; 2024 BidSphere. All Rights Reserved.</p>
         </div>
     </footer>
-
 </body>
 
 </html>
