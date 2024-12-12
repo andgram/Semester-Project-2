@@ -1,0 +1,39 @@
+/* ====================
+     Auction grid
+     ==================== */
+  
+     .auction-grid {
+        display: grid;
+        gap: .125rem;
+        grid-template-columns:
+          repeat(auto-fit, minmax(20rem, 1fr));
+      }
+      
+      .auction-item {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        text-decoration: none;
+        width: 300px;
+        overflow: hidden;
+        margin: 1em auto;
+      }
+      
+      .auction-item-image {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      
+      .auction-item-image:hover {
+        filter: brightness(0.5);
+        transition: 250ms;
+      }
+      
+      .auction-item h3 {
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        margin: 15px 0 10px 0;
+      }

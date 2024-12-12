@@ -8,42 +8,75 @@
     <script type="module" src="/src/main.js"></script>
 </head>
 
-<body>
-    <header>
-        <div class="header-wrapper">
-            <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation"
-                aria-expanded="false" role="button">
+<body class="bg-primary-700 text-neutral-300 font-primary">
+    <!-- Header -->
+    <header class="bg-primary-700 py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" role="button">
                 <span class="sr-only">Menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
             </div>
-            <a href="/" class="header-logo">Bid<span>Sphere</span></a>
-            <nav id="top-nav"></nav> <!-- The nav will be generated dynamically -->
+
+            <!-- Logo -->
+            <a href="/" class="text-neutral-300 text-2xl font-semibold font-accent">
+                Bid<span class="text-primary-500">Sphere</span>
+            </a>
+
+            <!-- Primary Navigation -->
+            <nav id="top-nav">
+                <!-- Dynamically generated menu will be inserted here -->
+            </nav>
         </div>
     </header>
 
-    <main class="section-spacing-top">
-        <section class="container">
-            <h1 class="text-center title">Explore Auctions</h1>
-            <div id="message"></div>
-            <h2 class="text-center">Newest Active</h2>
+    <!-- Main Content -->
+    <main>
+        <!-- Explore Auctions Section -->
+        <section class="container mx-auto px-4">
+            <h1 class="text-center text-4xl md:text-5xl leading-tight mb-8 font-light font-accent">
+                Explore <span class="font-bold">Auctions</span>
+            </h1>
+            <div id="message" class="text-center mb-8"></div>
+            <h2 class="text-center text-2xl md:text-3xl font-primary font-semibold mb-6">
+                Newest Active
+            </h2>
             <div id="auctionList" class="auction-grid">
                 <!-- Auction items will be dynamically loaded here -->
             </div>
         </section>
     </main>
 
-    <section class="bg-bluegray section-spacing">
-        <div class="container">
-            <div id="searchSection" class="search-section">
-                <h2 class="text-center">Search For Auctions</h2>
-                <div>
-                    <input type="text" id="searchInput" placeholder="Search auctions..." />
-                    <button id="searchButton">Search</button>
+    <!-- Search Section -->
+    <section class="bg-primary-600 py-14">
+        <div class="container mx-auto px-4">
+            <div id="searchSection" class="text-center">
+                <h2 class="text-2xl md:text-3xl font-primary font-semibold mb-6">
+                    Search For Auctions
+                </h2>
+                <div class="flex justify-center gap-4 mb-8">
+                    <input type="text" id="searchInput" placeholder="Search auctions..." 
+                        class="w-full max-w-md px-4 py-2 rounded-full bg-neutral-400 text-primary-700 placeholder-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                    <button id="searchButton" 
+                        class="py-2 px-6 rounded-full bg-primary-500 text-neutral-300 hover:bg-custom-hover-blue transition">
+                        Search
+                    </button>
                 </div>
-                <div id="searchResults" class="auction-grid"></div>
+                <div id="searchResults" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <!-- Search results will appear here -->
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="bg-primary-700 py-4 text-center text-neutral-300">
+        <div class="container mx-auto">
+            <p>&copy; 2024 BidSphere. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
