@@ -17,21 +17,25 @@ export function renderAuction(container, auction) {
 
     // Title
     const heading = document.createElement("h1");
+    heading.classList.add("auction-title"); // Add a class for styling
     heading.innerText = title;
     rightColumn.appendChild(heading);
 
     // Description
     const descriptionElement = document.createElement("p");
+    descriptionElement.classList.add("auction-description"); // Add a class for styling
     descriptionElement.innerText = description || "No description provided.";
     rightColumn.appendChild(descriptionElement);
 
     const adminButtons = renderAuctionButtons(auction);
-    if(adminButtons) {
+    if (adminButtons) {
+        adminButtons.classList.add("auction-admin-buttons"); // Add a class for styling
         rightColumn.appendChild(adminButtons);
     } 
 
     // Ends at
     const endsAtElement = document.createElement("p");
+    endsAtElement.classList.add("auction-ends-at"); // Add a class for styling
 
     // Check if the auction has expired
     const currentTime = new Date();
@@ -60,7 +64,7 @@ export function renderAuction(container, auction) {
 
         // Main Active Image
         const activeImage = document.createElement("img");
-        activeImage.classList.add("auction-active-image");
+        activeImage.classList.add("auction-active-image"); // Add a class for styling
         activeImage.src = media[0].url; // First image as the default active image
         activeImage.alt = media[0].alt || "Main Auction Image";
 
@@ -91,7 +95,6 @@ export function renderAuction(container, auction) {
             leftColumn.appendChild(thumbnailsContainer);
         }
     }
-
 
     // Append the left column to the container
     container.appendChild(leftColumn);

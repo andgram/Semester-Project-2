@@ -5,38 +5,70 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BidSphere – Auction Details</title>
         <script type="module" src="/src/main.js"></script>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     </head>
-<body>
-    <header>
-        <div class="header-wrapper">
-            <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation"
-                aria-expanded="false" role="button">
-                <span class="sr-only">Menu</span>
+    <body class="bg-primary-700 text-neutral-300 font-primary">
+        <header class="bg-primary-700 py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
+            <div class="container mx-auto flex justify-between items-center px-4">
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" role="button">
+                    <span class="sr-only">Menu</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </div>
+            
+                <!-- Logo -->
+                <a href="/" class="text-neutral-300 text-2xl font-semibold font-accent">
+                    Bid<span class="text-primary-500">Sphere</span>
+                </a>
+            
+                <!-- Primary Navigation -->
+                <nav id="top-nav">
+                    <!-- Dynamically generated menu will be inserted here -->
+                </nav>
             </div>
-            <a href="/" class="header-logo">Bid<span>Sphere</span></a>
-            <nav id="top-nav"></nav> <!-- The nav will be generated dynamically -->
-        </div>
-    </header>
+        </header>
 
-    <div id="message"></div>
-    <main>
-        <section class="section-spacing">
-        <div class="container">
-            <div id="auctionDetails" class="auction-details">
-                <!-- Display dynamic auction details here -->
-            </div>
-             <div id="auctionBids">
-                 <!-- Display dynamic bids here -->
-            </div>
-        </div>
-        </section>
-    </main>
+        <div id="message" class="pt-24 px-4 md:px-6"></div>
+        
+        <main>
+            <section class="section-spacing py-12">
+                <div class="container mx-auto px-4">
+                    <!-- Auction Details Section -->
+                    <div id="auctionDetails" class="flex bg-neutral-800 p-6 rounded-lg shadow-lg mb-8 content-center">
+                        <h2 class="text-3xl font-semibold text-primary-500 mb-4">Auction Title</h2>
+                        <p class="text-lg text-neutral-300 mb-6">Detailed description of the auction goes here.</p>
 
-    <footer>
-        <p>&copy; 2024 BidSphere</p></p>
+                        <div class="flex justify-between items-center">
+                            <div class="text-xl text-neutral-300">
+                                <span class="font-semibold">Starting Bid:</span> $50
+                            </div>
+                            <div class="text-xl text-neutral-300">
+                                <span class="font-semibold">Time Remaining:</span> 3h 45m
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <button class="bg-primary-500 text-neutral-300 px-6 py-3 rounded-full hover:bg-primary-600 transition">Place Your Bid</button>
+                        </div>
+                    </div>
+
+                    <!-- Bids Section -->
+                    <div id="auctionBids" class="bg-neutral-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-primary-500 mb-4">Current Bids</h3>
+
+                       
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+     <footer class="bg-primary-700 py-4 text-center text-neutral-300">
+        <div class="container mx-auto">
+            <p>&copy; 2024 BidSphere. All Rights Reserved.</p>
+        </div>
     </footer>
-</body>
+    </body>
 </html>
