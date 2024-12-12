@@ -8,22 +8,33 @@
     <script type="module" src="/src/main.js"></script>
 </head>
 
-<body>
-    <header>
-        <div class="header-wrapper">
-            <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation"
-                aria-expanded="false" role="button">
+<body id="profile">
+    <header class="bg-primary-700 py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" role="button">
                 <span class="sr-only">Menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
             </div>
-            <a href="/" class="header-logo">Bid<span>Sphere</span></a>
-            <nav id="top-nav"></nav> <!-- The nav will be generated dynamically -->
+        
+            <!-- Logo -->
+            <a href="/" class="text-neutral-300 text-2xl font-semibold font-accent">
+                Bid<span class="text-primary-500">Sphere</span>
+            </a>
+        
+            <!-- Primary Navigation -->
+            <nav id="top-nav">
+                <!-- Dynamically generated menu will be inserted here -->
+            </nav>
         </div>
     </header>
 
-    <main>
-        <section id="profile-header">
+    <div>
+        <div id="profile-header">
             <!-- Display banner and avatar here -->
-        </section>
+        </div>
 
          <!-- Profile Edit Modal (Initially hidden) -->
     <div id="profile-edit-modal" class="modal" style="display: none;">
@@ -47,23 +58,23 @@
 
         <div id="message"></div>
 
-        <section id="profile-details" class="profile-details text-center">
+        <div id="profile-details" class="profile-details text-center">
             <!-- Display profile details here -->
-        </section>
+        </div>
 
-        <section class="section-spacing">
-           <div class="container">
-            <h2 class="text-center my-auctions-heading">My auctions</h2>
+        <section>
+            <h2 class="text-2xl font-semibold text-center text-primary-800 mb-8">My auctions</h2>
             <div id="my-listings" class="auction-grid">
                 <h2>My listings</h2>
                 <!-- Display user lisitings here -->
             </div>
-           </div>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 BidSphere</p></p>
+    <!-- Footer -->
+    <footer class="bg-primary-700 py-4 text-center text-neutral-300">
+        <div class="container mx-auto">
+            <p>&copy; 2024 BidSphere. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 

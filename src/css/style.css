@@ -3,6 +3,7 @@
 @import url("listgrid.css");
 @import url("auction.css");
 @import url("section-layout.css");
+@import url("profile.css");
 
 @tailwind base;
 @tailwind components;

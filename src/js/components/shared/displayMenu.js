@@ -17,7 +17,7 @@ export function displayMenu() {
         ul.innerHTML = `
           <li><a href="/">Home</a></li>
           <li><a href="/auction/list/index.html">Listings</a></li>
-          <li><a href="/profile/">Edit Profile</a></li>
+          <li id="edit-profile-button"><a href="/profile/">Edit Profile</a></li>
           <li><a href="/auction/create/">Create Auction</a></li>
           <li><button id="logout-button">Logout</button></li>
         `;
