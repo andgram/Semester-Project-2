@@ -1,0 +1,9 @@
+main, section {
+    padding-top: 8rem; /* Default padding for large screens */
+}
+
+@media (max-width: 768px) {
+    main, section {
+        padding-top: 6rem;
+    }
+}

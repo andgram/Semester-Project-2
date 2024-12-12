@@ -88,6 +88,25 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
+  #auctionDetails #auctionBids {
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    background-color: var(--clr-primary-600);
+    padding: 2em;
+    border-radius: 10px;
+    padding: 2rem 4rem;
+  }
+  
+  #auctionDetails #auctionBids p {
+    margin: 0;
+  }
+  
+  #auctionBids button {
+    margin-top: 1rem;
+  }
+
   @media (max-width: 768px) {
     #auctionDetails {
       flex-direction: column;
@@ -101,7 +120,7 @@
       height: auto;
     }
   
-    #auctionBids {
+    #auctionDetails #auctionBids {
       padding: 2rem;
     }
   }

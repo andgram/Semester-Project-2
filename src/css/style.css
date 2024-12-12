@@ -2,9 +2,13 @@
 @import url("nav.css");
 @import url("listgrid.css");
 @import url("auction.css");
+@import url("section-layout.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
 
 
