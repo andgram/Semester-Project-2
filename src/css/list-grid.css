@@ -12,11 +12,11 @@
       .auction-item {
         display: flex;
         flex-direction: column;
-        align-items: left;
         text-decoration: none;
-        width: 300px;
+        max-width: 100%;
         overflow: hidden;
-        margin: 1em auto;
+        margin: 0 0.4em;
+        text-align: left;
       }
       
       .auction-item-image {
@@ -36,4 +36,15 @@
         font-weight: bold;
         color: #fff;
         margin: 15px 0 10px 0;
+      }
+
+      @media (max-width: 768px) {
+        .auction-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .auction-item {
+          max-width: 100%;
+          height: auto;
+        }
       }
