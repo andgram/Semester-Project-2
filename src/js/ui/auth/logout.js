@@ -9,7 +9,6 @@ export function onLogout() {
         logoutButton.addEventListener('click', handleLogout);
     }
 }
-
 function handleLogout() {
     clear();
     window.location.href = "/auth/login/";

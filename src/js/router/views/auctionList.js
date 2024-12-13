@@ -13,7 +13,6 @@ function displayNewestAuctions(auctions, limit) {
   renderAuctionList('#auctionList', limitedAuctions);
 }
 
-// Handle search
 async function handleSearch(event) {
     event.preventDefault();
 
@@ -31,10 +30,8 @@ async function handleSearch(event) {
     }
 }
 
-// Initialize the auctions page
 function initAuctionsPage() {
     displayNewestAuctions(auctions, 12);
     bindSearchEvents("#searchButton", "#searchInput", handleSearch);
 }
-
 initAuctionsPage();

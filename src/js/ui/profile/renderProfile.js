@@ -3,7 +3,6 @@ export function renderProfile(profileData) {
     const profileHeader = document.querySelector("#profile-header");
     const profileDetails = document.querySelector("#profile-details");
   
-    // Clear existing content in the containers
     if (profileHeader) {
       profileHeader.innerHTML = "";
     }
@@ -13,7 +12,6 @@ export function renderProfile(profileData) {
   
     const { name, bio, avatar, banner, credits } = profileData;
   
-    // Check and render avatar and banner in the #profile-header
     if (profileHeader) {
         // Render banner
         if (banner?.url) {

@@ -8,13 +8,12 @@ export async function onUpdateProfile(event) {
     const avatarUrl = document.getElementById('avatar-url').value;
     const bannerUrl = document.getElementById('banner-url').value;
     const bio = document.getElementById('bio').value;
-
+    
     const profileData = {
         avatar: avatarUrl ? { url: avatarUrl } : undefined, 
         banner: bannerUrl ? { url: bannerUrl } : undefined, 
         bio: bio || undefined
     };
-
     try {
         await updateProfile(profileData);
         displayMessage("#message", "success", "Profile updated succesdfully.");

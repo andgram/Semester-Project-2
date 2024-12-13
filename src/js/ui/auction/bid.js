@@ -9,7 +9,6 @@ export async function onPlaceBid(event, auctionId, bidAmount) {
         alert("Please enter a valid bid amount.");
         return;
     }
-
     try {
         const result = await placeBid(auctionId, bidAmount);
         

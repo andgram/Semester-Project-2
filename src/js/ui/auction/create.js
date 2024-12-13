@@ -37,7 +37,6 @@ export async function onCreateAuction(event) {
         displayMessage("#message", "error", error.message);
     }
 }
-
 // Logic to dynamically add media inputs
 export function onAddMediaInput() {
     const mediaInputsContainer = document.querySelector("#mediaInputs");

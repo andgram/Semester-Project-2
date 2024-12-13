@@ -24,17 +24,11 @@ async function displayAuction() {
     }
     
     try {
-        // Fetch auction data from the API
         const response = await readAuction(id);
 
         if (response.data) {
-            // Set page title to auction title
             setTitle(response.data.title);
-
-            // Render auction details
             renderAuction(container, response.data);
-
-            // Render bids, pass the bids array to the renderBids function
             renderBids(bidContainer, response.data.bids);
         } else {
             displayMessage(container, "error", "Auction not found.");
@@ -44,5 +38,4 @@ async function displayAuction() {
         displayMessage(container, "error", error.message);
     }
 }
-
 displayAuction();

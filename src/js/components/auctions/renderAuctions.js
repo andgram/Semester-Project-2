@@ -4,7 +4,7 @@ export function renderAuctions(container, auctions) {
        container.innerHTML = `<div id="message">No auctions to show</div>`;
        return;
     } 
-
+    
     container.innerHTML = "";
 
     const auctionItemHtml = auctions.map((auction) => createAuctionItemHtml(auction));

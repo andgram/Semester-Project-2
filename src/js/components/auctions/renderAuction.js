@@ -8,8 +8,6 @@ export function renderAuction(container, auction) {
     const sellerName = seller.name;
     const username = loadName();
 
-
-    
     // Create the left and right columns
     const leftColumn = document.createElement("div");
     leftColumn.classList.add("auction-left-col");

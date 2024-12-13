@@ -2,10 +2,7 @@ import { displayMenu, setupMobileNav } from "../components/shared/displayMenu.js
 
 export default async function router(pathname = window.location.pathname) {
 
- // Initialize the navigation menu
 displayMenu();
-
-// Set up the mobile menu toggle functionality
 setupMobileNav('#primary-navigation', '#mobile-nav-toggle');
 
   switch (pathname) {
@@ -38,6 +35,4 @@ setupMobileNav('#primary-navigation', '#mobile-nav-toggle');
       console.log("profile.js running");
       break;
   }
-
-  
 }

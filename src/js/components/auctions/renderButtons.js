@@ -28,6 +28,5 @@ export function renderAuctionButtons(auction) {
         });
         div.appendChild(bidButton);
     }
-
     return div;
 }

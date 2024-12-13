@@ -7,7 +7,6 @@ export async function onDeleteAuction(event) {
   if (confirm("Are you sure you want to delete this listing?")) {
       const button = event.target;
       const { id } = button.dataset;
-
       try {
           await deleteAuction(id);
           button.removeEventListener("click", onDeleteAuction);
