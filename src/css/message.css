@@ -1,0 +1,52 @@
+/* ====================
+     Message 
+     ==================== */
+
+     #message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        display: none;
+      }
+      
+      .message {
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 1;
+        transition: opacity 0.5s ease, transform 0.3s ease;
+      }
+      
+      .message p {
+        margin: 0;
+      }
+      
+      .message.error {
+        background-color: #f44336; 
+      }
+      
+      .message.success {
+        background-color: #4caf50;
+      }
+      
+      .message.info {
+        background-color: var(--clr-primary-500); 
+      }
+      
+      .message.warning {
+        background-color: #ff9800;
+      }
+      
+      .message.fade-out {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+      }

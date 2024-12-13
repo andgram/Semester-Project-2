@@ -13,9 +13,11 @@
   <header class="bg-primary-700 py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
     <div class="container mx-auto flex justify-between items-center px-4">
       <!-- Mobile Menu Toggle -->
-      <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" role="button">
+      <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"
+        role="button">
         <span class="sr-only">Menu</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-300" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </div>
@@ -27,7 +29,7 @@
 
       <!-- Primary Navigation -->
       <nav id="top-nav">
-        <!-- Dynamically generated menu will be inserted here -->
+        <!-- Dynamically generated menu  -->
       </nav>
     </div>
   </header>
@@ -45,42 +47,26 @@
         <!-- Title Input -->
         <div>
           <label for="title" class="block text-sm font-semibold text-neutral-200">Title (required):</label>
-          <input 
-            type="text" 
-            id="title" 
-            name="title" 
-            required 
-            class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100"
-          />
+          <input type="text" id="title" name="title" required
+            class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100" />
         </div>
 
         <!-- Description Input -->
         <div>
           <label for="description" class="block text-sm font-semibold text-neutral-200">Description (optional):</label>
-          <textarea 
-            id="description" 
-            name="description" 
-            rows="4" 
-            class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100"
-          ></textarea>
+          <textarea id="description" name="description" rows="4"
+            class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100"></textarea>
         </div>
 
         <!-- Media URLs Input -->
         <div>
           <label for="media" class="block text-sm font-semibold text-neutral-200">Media URLs (optional):</label>
           <div id="mediaInputs" class="space-y-2">
-            <input 
-              type="url" 
-              name="media" 
-              placeholder="https://example.com/image.jpg" 
-              class="w-full px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100"
-            />
+            <input type="url" name="media" placeholder="https://example.com/image.jpg"
+              class="w-full px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100" />
           </div>
-          <button 
-            type="button" 
-            id="addMedia" 
-            class="mt-2 w-full bg-blue-500 text-white py-2 rounded-full hover:bg-blue-600 transition duration-300"
-          >
+          <button type="button" id="addMedia"
+            class="mt-2 w-full bg-blue-500 text-white py-2 rounded-full hover:bg-blue-600 transition duration-300">
             Add Another Media URL
           </button>
         </div>
@@ -88,20 +74,13 @@
         <!-- End Date Input -->
         <div>
           <label for="endsAt" class="block text-sm font-semibold text-neutral-200">End Date (required):</label>
-          <input 
-            type="datetime-local" 
-            id="endsAt" 
-            name="endsAt" 
-            required 
-            class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100"
-          />
+          <input type="datetime-local" id="endsAt" name="endsAt" required
+            class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100" />
         </div>
 
         <!-- Submit Button -->
-        <button 
-          type="submit" 
-          class="w-full bg-blue-500 text-white py-2 rounded-full hover:bg-blue-600 transition duration-300"
-        >
+        <button type="submit"
+          class="w-full bg-blue-500 text-white py-2 rounded-full hover:bg-blue-600 transition duration-300">
           Create Auction
         </button>
       </form>

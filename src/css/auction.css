@@ -38,8 +38,7 @@
     justify-content: baseline;
   }
 
-  .place-bid-button {
-    background-color: #2563eb;
+  .place-bid-button, .delete-button {
     color: #fff; 
     padding: 0.5em 1em; 
     border: none; 
@@ -51,8 +50,20 @@
     width: fit-content;
   }
 
+  .place-bid-button {
+    background-color: #2563eb;
+  }
+ 
   .place-bid-button:hover {
     background-color: #1e3a8a; 
+  }
+
+  .delete-button {
+    background-color: #e41c1c;  
+  }
+
+  .delete-button:hover {
+    background-color: #a60b0b;  
   }
 
 div.bid-input-container {

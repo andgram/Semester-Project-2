@@ -13,16 +13,7 @@ export function renderAuctionButtons(auction) {
     // Show Delete button if the logged-in user is the seller
     if (sellerName === username) {
         const deleteButton = document.createElement("button");
-        deleteButton.classList.add(
-            "button", 
-            "bg-red-600", 
-            "text-white", 
-            "hover:bg-red-700", 
-            "rounded-lg", 
-            "py-2", "px-6", 
-            "transition", "duration-200", "ease-in-out", 
-            "focus:outline-none", "focus:ring-2", "focus:ring-red-500"
-        );
+        deleteButton.classList.add("delete-button");
         deleteButton.innerText = "Delete";
         deleteButton.dataset.id = id;
         deleteButton.addEventListener("click", onDeleteAuction);
