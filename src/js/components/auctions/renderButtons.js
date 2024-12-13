@@ -29,17 +29,8 @@ export function renderAuctionButtons(auction) {
         div.appendChild(deleteButton);
     } else if (isAuthenticated()) {
         const bidButton = document.createElement("button");
-        bidButton.classList.add(
-            "button", 
-            "bg-blue-600", 
-            "text-white", 
-            "hover:bg-blue-700", 
-            "rounded-lg", 
-            "py-2", "px-6", // Ensure this is applied correctly
-            "transition", "duration-200", "ease-in-out", 
-            "focus:outline-none", "focus:ring-2", "focus:ring-blue-500"
-        );
         bidButton.innerText = "Place Bid";
+        bidButton.classList.add("place-bid-button");
         bidButton.dataset.id = id;
         bidButton.addEventListener("click", () => {
             showBidInput(bidButton, id);

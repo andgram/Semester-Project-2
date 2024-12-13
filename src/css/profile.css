@@ -43,19 +43,22 @@
       
       #profile .profile-details h3 {
         font-size: 1.6rem;
+        color: #fff;
       }
       
      #profile .profile-details p {
         font-weight: 300;
+        color: #fff;
       }
       
       #profile .bio {
-        color: #000;
+        color: #fff;
+        margin-bottom: 2rem;
       }
       
       #profile .profile-credits {
         color: #fff;
-        background-color: #000;
+        background-color: rgb(55 116 249);
         width: fit-content;
         margin: 0 auto;
         padding: 0.4em 1.4em;
@@ -71,7 +74,9 @@
       }
 
       #profile .my-auctions-heading {
-        font-size: var(--fs-500);
+        font-size: 1.6rem;
+        color: #fff;
+        margin-bottom: 3em
       }
       
       @media (max-width: 600px) {
@@ -87,9 +92,13 @@
         #profile .profile-banner {
           height: 200px;
         }
+
+        #profile .my-auctions-heading {
+          margin-bottom: 1em;
+        }
       }
 
-      /* ====================
+    /* ====================
      Modal
      ==================== */
 
@@ -109,7 +118,7 @@
   
   #profile .modal-content {
     position: relative;
-    background: #000;
+    background: rgb(38 38 38);
     color: #fff;
     padding: 2rem;
     border-radius: 8px;
@@ -128,6 +137,7 @@
     margin-bottom: 1.5rem;
     font-size: 2rem;
     color: #fff;
+    font-weight: 600;
   }
   
   #profile #profile-edit-form label {
@@ -135,18 +145,19 @@
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
     display: block;
+    text-align: left;
   }
   
   #profile #profile-edit-form input,
   #profile #profile-edit-form textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #cccccc;
     border-radius: 4px;
     font-size: 1rem;
-    color: #333333;
+    color: rgb(245 245 245);
     box-sizing: border-box;
     margin-bottom: 1rem;
+    background-color: rgb(64 64 64);
   }
   
   #profile #profile-edit-form textarea {
@@ -180,13 +191,13 @@
   }
   
   #profile #profile-edit-form #cancel-edit {
-    background-color: #333333;
+    background-color: rgb(64 64 64);
     color: #fff;
     margin-left: 1rem;
   }
   
   #profile #profile-edit-form #cancel-edit:hover {
-    background-color: #1e1e1e;
+    background-color: rgb(48, 48, 48);
   }
   
   @media (max-width: 480px) {
