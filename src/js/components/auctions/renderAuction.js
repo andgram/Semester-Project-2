@@ -2,7 +2,7 @@ import { renderAuctionButtons } from "./renderButtons";
 import { loadName } from "../../utilities/storage";
 
 export function renderAuction(container, auction) {
-    container.innerHTML = ""; 
+    container.innerHTML = "";
     const { title, description, media, endsAt, seller } = auction;
 
     const sellerName = seller.name;
@@ -23,15 +23,15 @@ export function renderAuction(container, auction) {
 
     // Description
     const descriptionElement = document.createElement("p");
-    descriptionElement.classList.add("auction-description"); 
+    descriptionElement.classList.add("auction-description");
     descriptionElement.innerText = description || "No description provided.";
     rightColumn.appendChild(descriptionElement);
 
     const adminButtons = renderAuctionButtons(auction);
     if (adminButtons) {
-        adminButtons.classList.add("auction-admin-buttons"); 
+        adminButtons.classList.add("auction-admin-buttons");
         rightColumn.appendChild(adminButtons);
-    } 
+    }
 
     // Ends at
     const endsAtElement = document.createElement("p");
@@ -44,7 +44,7 @@ export function renderAuction(container, auction) {
     if (currentTime > endTime) {
         // Auction has expired
         endsAtElement.innerText = `Ended At: ${endTime.toLocaleString()}`;
-        
+
         // Check if sellername matches the username
         if (sellerName !== username && adminButtons) {
             adminButtons.remove(); // Remove the admin buttons
