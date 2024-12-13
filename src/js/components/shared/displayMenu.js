@@ -13,7 +13,7 @@ export function displayMenu() {
 
     if (loggedin) {
       // If the user is logged in and currently on the profile page
-      if (currentPage === "/profile/") {
+      if (currentPage === "/profile/index.html") {
         ul.innerHTML = `
           <li><a href="/">Home</a></li>
           <li><a href="/auction/list/index.html">Listings</a></li>
