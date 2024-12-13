@@ -126,9 +126,9 @@ div.bid-input-container {
 
   #auctionDetails .auction-ends-at {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     color: #fff;
-    background-color: #353945;
+    background-color: #3c4561;
     padding: 0.6em 1em;
     border-radius: 8px;
     text-align: center;
