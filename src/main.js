@@ -1,5 +1,5 @@
 import "./css/style.css";
+import { displayMenu, setupMobileNav } from "./js/components/shared/displayMenu";
 
-import router from "./js/router";
-
-await router(window.location.pathname);
+displayMenu();
+setupMobileNav('#primary-navigation', '#mobile-nav-toggle');
