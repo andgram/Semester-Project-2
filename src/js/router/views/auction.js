@@ -4,6 +4,7 @@ import { renderBids } from "../../components/auctions/renderBids";
 import { displayMessage } from "../../components/shared/displayMessage";
 import { getParam } from "../../utilities/getParam";
 import { setTitle } from "../../utilities/setTitle";
+import { isAuthenticated } from "../../utilities/storage";
 
 async function displayAuction() {
     const id = getParam("id");
@@ -16,6 +17,12 @@ async function displayAuction() {
     const container = document.querySelector("#auctionDetails");
     const bidContainer = document.querySelector("#auctionBids");
 
+    // Check if user is authenticated by calling the function
+    if (!isAuthenticated()) {
+        // Hide the bid container if not authenticated
+        bidContainer.style.display = "none";
+    }
+    
     try {
         // Fetch auction data from the API
         const response = await readAuction(id);
@@ -28,7 +35,6 @@ async function displayAuction() {
             renderAuction(container, response.data);
 
             // Render bids, pass the bids array to the renderBids function
-            // (If authenticated)
             renderBids(bidContainer, response.data.bids);
         } else {
             displayMessage(container, "error", "Auction not found.");
