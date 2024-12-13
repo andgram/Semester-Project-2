@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BidSphere – Create Auction</title>
+  <script type="module" crossorigin src="/assets/createAuction-ZipN-HE7.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-DxMEcUNX.js">
+  <link rel="modulepreload" crossorigin href="/assets/headers-es2B9U5o.js">
+  <link rel="modulepreload" crossorigin href="/assets/authGuard-C2GFzsuy.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-BeprdIDv.css">
+</head>
+
+<body class="bg-black text-neutral-100">
+  <!-- Header -->
+  <header class="bg-primary-700 py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <!-- Mobile Menu Toggle -->
+      <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"
+        role="button">
+        <span class="sr-only">Menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-300" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
+
+      <!-- Logo -->
+      <a href="/" class="text-neutral-300 text-2xl font-semibold font-accent">
+        Bid<span class="text-primary-500">Sphere</span>
+      </a>
+
+      <!-- Primary Navigation -->
+      <nav id="top-nav">
+        <!-- Dynamically generated menu  -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="mt-20 p-6">
+    <div class="container mx-auto max-w-lg bg-neutral-800 p-8 rounded-lg shadow-lg">
+      <!-- Heading -->
+      <h1 class="text-2xl font-bold text-center text-white mb-6">Create a New Auction</h1>
+
+      <!-- Create Auction Form -->
+      <form id="createAuction" class="space-y-4">
+        <div id="message"></div>
+
+        <!-- Title Input -->
+        <div>
+          <label for="title" class="block text-sm font-semibold text-neutral-200">Title (required):</label>
+          <input type="text" id="title" name="title" required
+            class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100" />
+        </div>
+
+        <!-- Description Input -->
+        <div>
+          <label for="description" class="block text-sm font-semibold text-neutral-200">Description (optional):</label>
+          <textarea id="description" name="description" rows="4"
+            class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100"></textarea>
+        </div>
+
+        <!-- Media URLs Input -->
+        <div>
+          <label for="media" class="block text-sm font-semibold text-neutral-200">Media URLs (optional):</label>
+          <div id="mediaInputs" class="space-y-2">
+            <input type="url" name="media" placeholder="https://example.com/image.jpg"
+              class="w-full px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100" />
+          </div>
+          <button type="button" id="addMedia"
+            class="mt-2 w-full bg-blue-500 text-white py-2 rounded-full hover:bg-blue-600 transition duration-300">
+            Add Another Media URL
+          </button>
+        </div>
+
+        <!-- End Date Input -->
+        <div>
+          <label for="endsAt" class="block text-sm font-semibold text-neutral-200">End Date (required):</label>
+          <input type="datetime-local" id="endsAt" name="endsAt" required
+            class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100" />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit"
+          class="w-full bg-blue-500 text-white py-2 rounded-full hover:bg-blue-600 transition duration-300">
+          Create Auction
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary-700 py-4 text-center text-neutral-300 mt-10">
+    <div class="container mx-auto">
+      <p class="text-gray-600">&copy; 2024 BidSphere. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

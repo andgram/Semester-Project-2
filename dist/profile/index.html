@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidSphere – Register</title>
+  <script type="module" crossorigin src="/assets/profile-Dn1R8GwD.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-DxMEcUNX.js">
+  <link rel="modulepreload" crossorigin href="/assets/headers-es2B9U5o.js">
+  <link rel="modulepreload" crossorigin href="/assets/readAuction-DM6NZyQF.js">
+  <link rel="modulepreload" crossorigin href="/assets/authGuard-C2GFzsuy.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-BeprdIDv.css">
+</head>
+
+<body id="profile" class="bg-primary-700">
+    <header class="bg-primary-700 py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" role="button">
+                <span class="sr-only">Menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+        
+            <!-- Logo -->
+            <a href="/" class="text-neutral-300 text-2xl font-semibold font-accent">
+                Bid<span class="text-primary-500">Sphere</span>
+            </a>
+        
+            <!-- Primary Navigation -->
+            <nav id="top-nav">
+                <!-- Dynamically generated menu  -->
+            </nav>
+        </div>
+    </header>
+
+    <div>
+        <div id="profile-header">
+            <!-- Display banner and avatar here -->
+        </div>
+
+         <!-- Profile Edit Modal (Initially hidden) -->
+    <div id="profile-edit-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Edit Profile</h2>
+            <form id="profile-edit-form">
+                <label for="avatar-url">Avatar URL:</label>
+                <input type="text" id="avatar-url" name="avatar-url" placeholder="Enter new avatar URL"><br>
+
+                <label for="banner-url">Banner URL:</label>
+                <input type="text" id="banner-url" name="banner-url" placeholder="Enter new banner URL"><br>
+
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" placeholder="Enter new bio"></textarea><br>
+
+                <button type="submit">Update Profile</button>
+                <button type="button" id="cancel-edit">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+        <div id="message"></div>
+
+        <div id="profile-details" class="profile-details text-center">
+            <!-- Display profile details here -->
+        </div>
+
+        <section>
+            <h2 class="text-2xl font-semibold text-center text-primary-800 mb-8 my-auctions-heading">My auctions</h2>
+            <div id="my-listings" class="auction-grid">
+                <h2>My listings</h2>
+                <!-- Display user lisitings here -->
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-700 py-4 text-center text-neutral-300">
+        <div class="container mx-auto">
+            <p class="text-gray-600">&copy; 2024 BidSphere. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

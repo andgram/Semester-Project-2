@@ -17,8 +17,8 @@ export function displayMenu() {
         ul.innerHTML = `
           <li><a href="/">Home</a></li>
           <li><a href="/auction/list/index.html">Listings</a></li>
-          <li id="edit-profile-button"><a href="/profile/">Edit Profile</a></li>
-          <li><a href="/auction/create/">Create Auction</a></li>
+          <li id="edit-profile-button"><a href="/profile/index.html">Edit Profile</a></li>
+          <li><a href="/auction/create/index.html">Create Auction</a></li>
           <li><button id="logout-button">Logout</button></li>
         `;
       } else {
@@ -26,8 +26,8 @@ export function displayMenu() {
         ul.innerHTML = `
           <li><a href="/">Home</a></li>
           <li><a href="/auction/list/index.html">Listings</a></li>
-          <li><a href="/profile/">My Profile</a></li>
-          <li><a href="/auction/create/">Create Auction</a></li>
+          <li><a href="/profile/index.html">My Profile</a></li>
+          <li><a href="/auction/create/index.html">Create Auction</a></li>
           <li><button id="logout-button">Logout</button></li>
         `;
       }
@@ -42,8 +42,8 @@ export function displayMenu() {
       ul.innerHTML = `
         <li><a href="/">Home</a></li>
         <li><a href="/auction/list/index.html">Listings</a></li>
-        <li><a href="/auth/login/">Login</a></li>
-        <li><a href="/auth/register/">Register</a></li>
+        <li><a href="/auth/login/index.html">Login</a></li>
+        <li><a href="/auth/register/index.html">Register</a></li>
       `;
     }
 

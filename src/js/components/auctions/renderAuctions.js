@@ -33,7 +33,8 @@ function createAuctionItemHtml(auctionItem) {
         imageElement.alt = firstMedia.alt || `${title} image`;
     } else {
         // Fallback to a placeholder if no media is available
-        imageElement.src = "/src/assets/placeholder.jpg";
+        imageElement.src = "/assets/placeholder.jpg"
+        ;
         imageElement.alt = "Placeholder image";
     }
     item.appendChild(imageElement);

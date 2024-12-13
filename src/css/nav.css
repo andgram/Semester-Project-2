@@ -39,6 +39,10 @@
     transform: translateX(0%);
   }
 
+  .primary-navigation a {
+    padding: 0;
+  }
+
   /* Mobile menu toggle button */
   .mobile-nav-toggle {
     display: block;
