@@ -105,6 +105,11 @@
   
   #auctionBids button {
     margin-top: 1rem;
+    text-decoration: underline;
+  }
+
+  #auctionBids button:hover {
+    color: #9a9a9b;
   }
 
   @media (max-width: 768px) {

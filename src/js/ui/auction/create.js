@@ -44,6 +44,7 @@ export function onAddMediaInput() {
     const newMediaInput = document.createElement("input");
     newMediaInput.type = "url";
     newMediaInput.name = "media";
+    newMediaInput.className = "w-full px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100";
     newMediaInput.placeholder = "https://example.com/image.jpg";
     mediaInputsContainer.appendChild(newMediaInput);
   }

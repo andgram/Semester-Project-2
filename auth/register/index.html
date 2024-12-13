@@ -5,81 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BidSphere – Register</title>
     <script type="module" src="/src/main.js"></script>
-</head>
-<body>
-  <header class="bg-primary-700 py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center px-4">
+  </head>
+  <body class="bg-black text-neutral-100">
+
+    <!-- Header -->
+    <header class="bg-primary-700 py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
+      <div class="container mx-auto flex justify-between items-center px-4">
         <!-- Mobile Menu Toggle -->
         <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" role="button">
-            <span class="sr-only">Menu</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <span class="sr-only">Menu</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </div>
-    
+      
         <!-- Logo -->
         <a href="/" class="text-neutral-300 text-2xl font-semibold font-accent">
-            Bid<span class="text-primary-500">Sphere</span>
+          Bid<span class="text-primary-500">Sphere</span>
         </a>
-    
+      
         <!-- Primary Navigation -->
         <nav id="top-nav">
-            <!-- Dynamically generated menu will be inserted here -->
+          <!-- Dynamically generated menu will be inserted here -->
         </nav>
-    </div>
-</header>
+      </div>
+    </header>
 
-<main class="form-container">
-  <h1 class="auth-heading">Create a New Account</h1>
+    <!-- Main Content -->
+    <main class="mt-20 p-6">
+      <div class="container mx-auto max-w-md bg-neutral-800 p-8 rounded-lg shadow-lg">
 
-  <form name="register" class="clean-form">
-    <div id="message"></div>
+        <!-- Heading -->
+        <h1 class="text-2xl font-bold text-center text-white mb-6">Create a New Account</h1>
 
-    <div>
-      <label for="name">Name</label>
-      <input
-        id="name"
-        type="text"
-        name="name"
-        required
-        maxlength="20"
-        pattern="^[\w]+$"
-        title="Enter username"
-      />
-    </div>
+        <!-- Register Form -->
+        <form name="register" class="space-y-4">
+          <div id="message"></div>
+          
+          <!-- Name Input -->
+          <div>
+            <label for="name" class="block text-sm font-semibold text-neutral-200">Name</label>
+            <input 
+              id="name" 
+              type="text" 
+              name="name" 
+              required 
+              maxlength="20" 
+              pattern="^[\\w]+$" 
+              title="Enter username" 
+              class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100"
+            />
+          </div>
 
-    <div>
-      <label for="email">Email</label>
-      <input
-        id="email"
-        type="email"
-        name="email"
-        required
-        title="Enter a valid stud.noroff.no address"
-      />
-    </div>
+          <!-- Email Input -->
+          <div>
+            <label for="email" class="block text-sm font-semibold text-neutral-200">Email</label>
+            <input 
+              id="email" 
+              type="email" 
+              name="email" 
+              required 
+              title="Enter a valid email address" 
+              class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100"
+            />
+          </div>
 
-    <div>
-      <label for="password">Password</label>
-      <input
-        type="password"
-        name="password"
-        id="password"
-        required
-      />
-    </div>
+          <!-- Password Input -->
+          <div>
+            <label for="password" class="block text-sm font-semibold text-neutral-200">Password</label>
+            <input 
+              type="password" 
+              name="password" 
+              id="password" 
+              required 
+              class="w-full mt-2 px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100"
+            />
+          </div>
 
-    <button type="submit">Register</button>
-  </form>
+          <!-- Submit Button -->
+          <button 
+            type="submit" 
+            class="w-full bg-blue-500 text-white py-2 rounded-full hover:bg-blue-600 transition duration-300"
+          >
+            Register
+          </button>
+        </form>
 
-  <p>Already have an account? <a href="/auth/login/">Login here</a></p>
-</main>
+        <!-- Login Link -->
+        <p class="text-center text-sm mt-4 text-neutral-200">Already have an account? <a href="/auth/login/" class="text-primary-500 hover:underline">Login here</a></p>
+      </div>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-700 py-4 text-center text-neutral-300">
+    <footer class="bg-primary-700 py-4 text-center text-neutral-300 mt-10">
       <div class="container mx-auto">
-          <p>&copy; 2024 BidSphere. All Rights Reserved.</p>
+        <p>&copy; 2024 BidSphere. All Rights Reserved.</p>
       </div>
-  </footer>
-</body>
+    </footer>
+
+  </body>
 </html>
