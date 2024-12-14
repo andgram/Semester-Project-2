@@ -1,0 +1,27 @@
+/* ====================
+   Hero section
+   ==================== */
+
+   .hero-bg {
+    background-image: url("./public/assets/hero-bg.jpg");
+    background-size: cover;
+    background-position: right top;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-bg .hero-left-col {
+    width: 66%;
+  }
+
+  @media (max-width: 50em) {
+  
+    .hero-bg .hero-left-col {
+      width: 100%;
+    }
+  
+    .hero-bg {
+      background: #000;
+    }
+  }

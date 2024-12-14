@@ -11,7 +11,7 @@
 
 <body class="bg-primary-700 text-neutral-300 font-primary">
     <header class="bg-primary-700 py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="mx-auto flex justify-between items-center px-4 md:px-14 lg:px-32">
             <!-- Mobile Menu Toggle -->
             <div class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" role="button">
                 <span class="sr-only">Menu</span>
@@ -33,11 +33,10 @@
     </header>
 
     <main>
-        <div class="hero-bg bg-cover bg-center py-40 text-neutral-300">
-                <div class="container mx-auto px-4 text-center mb-8">
-
-                        <div id="message"></div>
-                    
+        <div class="hero-bg mx-auto px-4 md:px-14 lg:px-32">
+                <div>
+                    <div id="message"></div>
+                    <div class="hero-left-col">
                         <h1 class="hero-heading text-4xl md:text-5xl leading-tight mb-4 font-light font-accent">
                             Find Rare <span class="font-bold">Treasures</span>
                             and <span class="font-bold">Unique Deals!</span>
@@ -45,10 +44,10 @@
                         <p class="subhead text-lg md:text-xl mb-8 font-primary">
                             Discover unique items, outbid the rest, and make them yours today.
                         </p>
-                        
 
-                        <!-- Buttons -->
-                        <div id="user-actions" class="button-group flex justify-center gap-4">
+            
+                         <!-- Buttons -->
+                         <div id="user-actions" class="button-group flex gap-4">
                             <a href="/auction/list/index.html"
                                 class="button-secondary py-2 px-6 rounded-full bg-primary-500 text-neutral-300 hover:bg-custom-hover-blue transition">
                                 Explore Listings
@@ -59,14 +58,16 @@
                                 Sign Up
                             </a>
                         </div>
+
+                    </div>
                 </div>
         </div>
     </main>
 
      <!-- Footer -->
      <footer class="bg-primary-700 py-4 text-center text-neutral-300">
-        <div class="container mx-auto">
-            <p class="text-gray-600">&copy; 2024 BidSphere. All Rights Reserved.</p>
+        <div class="wrapper mx-auto">
+            <p class="text-gray-300">&copy; 2024 BidSphere. All Rights Reserved.</p>
         </div>
     </footer>
 </body>

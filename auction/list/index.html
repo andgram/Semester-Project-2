@@ -10,7 +10,7 @@
 </head>
 
     <!-- Header -->
-    <body class="bg-primary-700 text-neutral-300 font-primary">
+    <body id="listPage" class="bg-primary-700 text-neutral-300 font-primary">
         <header class="bg-primary-700 py-4 fixed w-full top-0 left-0 z-50 shadow-lg">
             <div class="container mx-auto flex justify-between items-center px-4">
                 <!-- Mobile Menu Toggle -->
@@ -35,7 +35,8 @@
 
     <!-- Main Content -->
     <main class="mx-auto px-4">
-        <!-- Explore Auctions Section -->
+        <div class="container">
+            <!-- Explore Auctions Section -->
             <h1 class="text-center text-4xl md:text-5xl leading-tight mb-8 font-light font-accent">
                 Explore <span class="font-bold">Auctions</span>
             </h1>
@@ -46,26 +47,29 @@
             <div id="auctionList" class="auction-grid">
                 <!-- Auction items will be dynamically loaded here -->
             </div>
+        </div>
     </main>
 
     <!-- Search Section -->
     <section class="mx-auto px-4">
-            <div id="searchSection" class="text-center">
-                <h2 class="text-2xl md:text-3xl font-primary font-semibold mb-6">
-                    Search For Auctions
-                </h2>
-                <div class="flex justify-center gap-4 mb-8">
-                    <input type="text" id="searchInput" placeholder="Search auctions..." 
-                        class="w-full max-w-md px-4 py-2 rounded-full bg-neutral-300 text-primary-700 placeholder-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500" />
-                    <button id="searchButton" 
-                        class="py-2 px-6 rounded-full bg-primary-500 text-neutral-300 hover:bg-custom-hover-blue transition">
-                        Search
-                    </button>
-                </div>
-                <div id="searchResults" class="auction-grid">
-                    <!-- Search results will appear here -->
-                </div>
-        </div>
+            <div class="container">
+                <div id="searchSection" class="text-center">
+                    <h2 class="text-2xl md:text-3xl font-primary font-semibold mb-6">
+                        Search For Auctions
+                    </h2>
+                    <div class="flex justify-center gap-4 mb-8">
+                        <input type="text" id="searchInput" placeholder="Search auctions..." 
+                            class="w-full max-w-md px-4 py-2 rounded-full bg-neutral-300 text-primary-700 placeholder-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+                        <button id="searchButton" 
+                            class="py-2 px-6 rounded-full bg-primary-500 text-neutral-300 hover:bg-custom-hover-blue transition">
+                            Search
+                        </button>
+                    </div>
+                    <div id="searchResults" class="auction-grid">
+                        <!-- Search results will appear here -->
+                    </div>
+            </div>
+            </div>
     </section>
 
     <!-- Footer -->
