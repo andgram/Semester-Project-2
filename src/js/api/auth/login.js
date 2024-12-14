@@ -12,7 +12,9 @@ export async function login({ email, password }) {
   if (!response.ok) {
     const errorData = await response.json();
 
-    throw new Error(errorData.message || "Login failed");
+    const errorMessage = errorData.errors?.[0]?.message || "Login failed";
+
+    throw new Error(errorMessage);
   }
 
   return await response.json();
