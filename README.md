@@ -4,7 +4,7 @@ Welcome to the **BidSphere Auction App**! This is a dynamic web application buil
 
 ---
 
-## 🚀 Features
+## Features
 
 This application was designed based on specific user requirements outlined by the client. These requirements are listed below as **User Stories**:
 
@@ -22,13 +22,6 @@ This application was designed based on specific user requirements outlined by th
 8. **Search Listings**: Unregistered users can browse and search through all available listings.  
 
 These features ensure a an engaging auction experience for different types of users.
-
----
-
-## 📸 Screenshots
-
-![Homepage Screenshot](path/to/screenshot1.jpg)  
-![Auction Page Screenshot](path/to/screenshot2.jpg)  
 
 ---
 
