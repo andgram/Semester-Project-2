@@ -28,9 +28,13 @@ export async function updateProfile({ avatar, banner, bio }) {
 
         if (!response.ok) {
             const errorData = await response.json();
+
+            const errorMessage = errorData.errors?.[0]?.message || "Failed to update profile.";
+
             console.error('Failed to update profile:', errorData);
-            throw new Error(`Failed to update profile: ${errorData.message}`);
+            throw new Error(errorMessage);
         }
+
 
         return await response.json();
 
