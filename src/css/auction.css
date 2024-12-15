@@ -199,6 +199,14 @@ div.bid-input-container {
     color: #9a9a9b;
   }
 
+  .x-close-button {
+    padding: 5px;
+  }
+
+  .x-close-button:hover {
+    color: #b7b7b7;
+  }
+
   @media (max-width: 768px) {
     #auctionDetails {
       flex-direction: column;
