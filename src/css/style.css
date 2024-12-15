@@ -6,10 +6,6 @@
 @import url("list-grid.css");
 @import url("hero.css");
 
-.x-close-button {
-  padding: 5px;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

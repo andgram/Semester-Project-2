@@ -38,6 +38,7 @@ function createListingHtml(auction) {
         imageElement.src = media[0].url;
         imageElement.alt = media[0].alt || "Auction image";
     } else {
+        imageElement.src = "/assets/placeholder.jpg";
         imageElement.alt = "No image available";
     }
 

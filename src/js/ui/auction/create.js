@@ -37,11 +37,11 @@ export async function onCreateAuction(event) {
         displayMessage("#message", "error", error.message);
     }
 }
-// Logic to dynamically add media inputs
-// Set the maximum number of media URLs allowed
-const MAX_MEDIA_URLS = 5;
 
+// Logic to dynamically add media inputs
 export function onAddMediaInput() {
+
+const MAX_MEDIA_URLS = 5;
   const mediaInputsContainer = document.querySelector("#mediaInputs");
 
   // Count the number of current media inputs
@@ -49,9 +49,8 @@ export function onAddMediaInput() {
 
   // Check if the current count exceeds the max limit
   if (currentMediaInputs >= MAX_MEDIA_URLS) {
-    // Optionally, show an alert or a message to the user
     alert(`You can only add up to ${MAX_MEDIA_URLS} media URLs.`);
-    return; // Prevent adding more inputs
+    return; 
   }
 
   // Create a container div for the input and button
