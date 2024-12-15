@@ -6,9 +6,11 @@ export function renderBids(container, bids) {
         return;
     }
 
-    bids.reverse();
-    
+    // Sort bids in descending order by amount to ensure the highest bid is first
+    bids.sort((a, b) => b.amount - a.amount);
+
     const highestBid = bids[0]; 
+
     const bidElement = document.createElement("p");
     bidElement.innerText = `Highest Bid: $${highestBid.amount}`;
     container.appendChild(bidElement);
