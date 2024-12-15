@@ -2,26 +2,29 @@
    Hero section
    ==================== */
 
-   .hero-bg {
-    background-image: url("./public/assets/hero-bg.jpg");
+.hero-bg {
+  background: url('./public/assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg .hero-left-col {
+  width: 66%;
+}
+
+/* Mobile adjustments */
+@media (max-width: 50em) {
+  .hero-bg {
+    background: url('./public/assets/hero-bg-mobile.jpg');
     background-size: cover;
-    background-position: right top;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-  
-  .hero-bg .hero-left-col {
-    width: 66%;
+    background-position: top;
   }
 
-  @media (max-width: 50em) {
-  
-    .hero-bg .hero-left-col {
-      width: 100%;
-    }
-  
-    .hero-bg {
-      background: #000;
-    }
+  .hero-bg .hero-left-col {
+    width: 90%;
   }
+}
