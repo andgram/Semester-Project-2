@@ -76,9 +76,9 @@
       #profile .my-auctions-heading {
         font-size: 1.6rem;
         color: #fff;
-        margin-bottom: 3em
+        margin-bottom: 3em;
       }
-      
+
       @media (max-width: 600px) {
         #profile .profile-avatar {
           width: 80px;

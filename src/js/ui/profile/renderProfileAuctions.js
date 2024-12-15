@@ -2,10 +2,15 @@ export function renderProfileAuctions(container, auctions) {
 
     const auctionsData = auctions.data;
 
-    if (auctionsData.length === 0) {
-        container.innerHTML = `<div id="message">No listings yet</div>`;
+    if (!Array.isArray(auctionsData) || auctionsData.length === 0) {
+        container.innerHTML = `
+            <p class="text-white text-center">
+                No listings to display.
+            </p>
+        `;
         return;
     }
+    
 
     container.innerHTML = "";
 
