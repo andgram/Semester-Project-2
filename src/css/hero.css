@@ -3,7 +3,7 @@
    ==================== */
 
 .hero-bg {
-  background: url('./public/assets/hero-bg.jpg');
+  background: url('/assets/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 /* Mobile adjustments */
 @media (max-width: 50em) {
   .hero-bg {
-    background: url('./public/assets/hero-bg-mobile.jpg');
+    background: url('/assets/hero-bg-mobile.jpg');
     background-size: cover;
     background-position: top;
   }

@@ -42,8 +42,8 @@
       <h1 class="text-2xl font-bold text-center text-white mb-6">Create a New Auction</h1>
 
       <!-- Create Auction Form -->
-      <form id="createAuction" class="space-y-4">
-        <div id="message"></div>
+      <form id="createAuction" name="createAuction" class="space-y-4">
+        <div id="message" aria-live="polite"></div>
 
         <!-- Title Input -->
         <div>
@@ -66,7 +66,7 @@
             <input type="url" name="media" placeholder="https://example.com/image.jpg"
               class="w-full px-4 py-2 border border-neutral-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-700 text-neutral-100" />
           </div>
-          <button type="button" id="addMedia"
+          <button type="button" id="addMedia" aria-label="Add another media URL"
             class="mt-2 w-full bg-blue-500 text-white py-2 rounded-full hover:bg-blue-600 transition duration-300">
             Add Another Media URL
           </button>

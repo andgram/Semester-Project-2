@@ -26,16 +26,17 @@
             </a>
         
             <!-- Primary Navigation -->
-            <nav id="top-nav">
+            <nav id="top-nav" aria-label="Primary Navigation">
                 <!-- Dynamically generated menu  -->
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <div class="hero-bg mx-auto px-4 md:px-14 lg:px-32">
                 <div>
-                    <div id="message"></div>
+                    <div id="message" aria-live="polite"></div>
                     <div class="hero-left-col">
                         <h1 class="hero-heading text-5xl md:text-6xl leading-tight mb-4 font-light font-accent">
                             Find Rare <span class="font-bold">Treasures</span>
@@ -49,12 +50,12 @@
                          <!-- Buttons -->
                          <div id="user-actions" class="button-group flex gap-4">
                             <a href="/auction/list/index.html"
-                                class="button-secondary py-2 px-6 rounded-full bg-primary-500 text-neutral-300 hover:bg-custom-hover-blue transition">
+                                class="button-secondary py-2 px-6 rounded-full bg-primary-500 text-neutral-300 hover:bg-custom-hover-blue transition" role="button">
                                 Explore Listings
                             </a>
                             <a href="/auth/register/"
                                 class="button py-2 px-6 rounded-full bg-primary-600 text-neutral-300 hover:bg-custom-hover-gray transition"
-                                id="sign-up-button">
+                                id="sign-up-button" role="button">
                                 Sign Up
                             </a>
                         </div>
