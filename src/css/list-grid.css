@@ -8,6 +8,7 @@
         grid-template-columns:
           repeat(auto-fit, minmax(20rem, 1fr));
         justify-content: center;
+        align-items: center;
       }
       
       .auction-item {
@@ -19,6 +20,7 @@
         margin: 0 0.4em;
         align-items: center;
       }
+
       
       .auction-item-image {
         width: 300px;

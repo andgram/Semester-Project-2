@@ -1,9 +1,0 @@
-main, section {
-    padding-top: 8rem;
-}
-
-@media (max-width: 768px) {
-    main, section {
-        padding-top: 6rem;
-    }
-}
