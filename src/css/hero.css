@@ -5,7 +5,7 @@
 .hero-bg {
   background: url('/assets/hero-bg.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
@@ -14,17 +14,26 @@
 
 .hero-bg .hero-left-col {
   width: 66%;
+  margin-bottom: 180px;
 }
 
 /* Mobile adjustments */
 @media (max-width: 50em) {
   .hero-bg {
-    background: url('/assets/hero-bg-mobile.jpg');
+    background: url('./public/assets/hero-bg-mobile.jpg');
     background-size: cover;
-    background-position: top;
+    background-position: center top;
+    text-align: center;
+    height: 80vh;
   }
 
   .hero-bg .hero-left-col {
-    width: 90%;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 80px;
   }
-}
+
+  .hero-bg .hero-left-col .button-group {
+    justify-content: center;
+  }
+} 
