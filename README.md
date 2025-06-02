@@ -58,14 +58,14 @@ To run the project locally:
 ### Installation
 
 1. Clone the repository:
-git clone https://github.com/yourusername/auction-site.git
+git clone https://github.com/andgram/Semester-Project-2.git
 cd auction-site
 
 2. Install dependencies:
 npm install
 
 3. Create a .env file in the root and add:
-VITE_API_BASE_URL=https://api.noroff.dev/api/v1/auction
+VITE_API_BASE_URL=https://api.noroff.dev/api/v2/auction
 
 4. Start the development server:
 npm run dev
